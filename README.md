@@ -1,0 +1,1 @@
+Dropshipping store approach for PrimeWash Gear Australia: build COMPLETE static HTML store as prototype/placeholder, user activates by connecting CJ Dropshipping AU warehouse or Spocket (Shopify apps). Photos come from supplier. Store structure is done: 18 products, cart, homepage, shop filters, product detail page. Ready for activation.
