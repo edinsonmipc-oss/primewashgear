@@ -1,115 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout — PrimeWash Gear Australia</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; }
-    .container { max-width: 640px; margin: 0 auto; padding: 24px; }
-    .header { text-align: center; padding: 32px 0; }
-    .header h1 { font-size: 24px; font-weight: 800; }
-    .header span { color: #2563eb; }
-    .card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px; margin-bottom: 16px; }
-    .card h2 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .card .price { font-size: 28px; font-weight: 900; color: #2563eb; }
-    .card .old-price { font-size: 14px; color: #94a3b8; text-decoration: line-through; }
-    .card .items { font-size: 14px; color: #64748b; margin: 12px 0; line-height: 1.6; }
-    .paypal-btn {
-      display: block; width: 100%; padding: 16px; background: #0070ba; color: white;
-      font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;
-      text-align: center; text-decoration: none; transition: background 0.2s;
-    }
-    .paypal-btn:hover { background: #005ea6; }
-    .note { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 8px; }
-    .back { display: block; text-align: center; margin-top: 24px; color: #2563eb; text-decoration: none; font-size: 14px; }
-    .trust { display: flex; justify-content: center; gap: 16px; margin-top: 24px; font-size: 12px; color: #64748b; flex-wrap: wrap; }
-    footer { text-align: center; padding: 32px 0; font-size: 13px; color: #94a3b8; }
-    .pro-badge { font-size:11px;background:#f59e0b;color:#0f172a;padding:3px 10px;border-radius:999px;font-weight:700;vertical-align:middle;margin-left:8px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>💧 PrimeWash<span>Gear</span></h1>
-      <p style="color:#64748b;font-size:14px;">Secure checkout — pay with PayPal or credit card</p>
-    </div>
-
-    <div class="card" style="border-color:#f59e0b;border-width:2px;">
-      <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px;">
-        <div>
-          <h2>💪 Pro Pack <span class="pro-badge">MOST POPULAR</span></h2>
-          <div class="items">
-            Turbo Nozzle + Foam Cannon + 15m Steel Hose<br>
-            Brass Connectors (10-pack) + Surface Cleaner + Wash Brush
-          </div>
-        </div>
-        <div style="text-align:right;">
-          <div class="price">$174.99</div>
-          <div class="old-price">Was $397.72</div>
-          <div style="font-size:12px;color:#16a34a;font-weight:700;">Save $222.73 (56%)</div>
-        </div>
-      </div>
-      <p style="font-size:13px;color:#64748b;margin:12px 0;">AU shipping included. Ships from Melbourne. 30-day guarantee.</p>
-      <a href="https://www.paypal.com/ncp/payment/XXXXXXXXXX" class="paypal-btn" target="_blank" id="proPackBtn">
-        Buy Now $174.99 AUD
-      </a>
-      <div class="note">PayPal + Credit/Debit Card + Afterpay accepted</div>
-    </div>
-
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px;">
-        <div>
-          <h2>🚀 Starter Kit</h2>
-          <div class="items">
-            5-in-1 Nozzle Set + Turbo Nozzle + Brass Couplers + 10m Hose + Spray Gun
-          </div>
-        </div>
-        <div style="text-align:right;">
-          <div class="price">$99.00</div>
-          <div class="old-price">Was $159.94</div>
-          <div style="font-size:12px;color:#16a34a;font-weight:700;">Save $60.94 (38%)</div>
-        </div>
-      </div>
-      <a href="https://www.paypal.com/ncp/payment/XXXXXXXXXX" class="paypal-btn" target="_blank" id="starterBtn">
-        Buy Now $99.00 AUD
-      </a>
-    </div>
-
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px;">
-        <div>
-          <h2>🔧 Maintenance Pack</h2>
-          <div class="items">
-            Pump Oil (1L) + Inlet Filters (5-pack) + O-Ring Kit (100+ pc)
-          </div>
-        </div>
-        <div style="text-align:right;">
-          <div class="price">$44.99</div>
-          <div class="old-price">Was $62.46</div>
-          <div style="font-size:12px;color:#16a34a;font-weight:700;">Save $17.47 (28%)</div>
-        </div>
-      </div>
-      <p style="font-size:12px;color:#64748b;margin:8px 0;">Reorder every 3 months — keeps your pressure washer running like new</p>
-      <a href="https://www.paypal.com/ncp/payment/XXXXXXXXXX" class="paypal-btn" target="_blank" id="maintBtn">
-        Buy Now $44.99 AUD
-      </a>
-    </div>
-
-    <div class="trust">
-      <span>PayPal Protection</span>
-      <span>Free AU Shipping</span>
-      <span>30-Day Returns</span>
-      <span>Melbourne Based</span>
-    </div>
-    <a href="https://edinsonmipc-oss.github.io/primewashgear/" class="back">Back to Store</a>
-    <footer>
-      <p>PrimeWash Gear Australia · Notting Hill VIC 3168 · 0406 170 544</p>
-      <p style="margin-top:4px;">Questions? Text or call — we reply fast.</p>
-    </footer>
-  </div>
-</body>
-</html>
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|  <meta charset="UTF-8">
+     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|  <title>Checkout — PrimeWash Gear Australia</title>
+     7|  <link rel="preconnect" href="https://fonts.googleapis.com">
+     8|  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+     9|  <style>
+    10|    * { box-sizing: border-box; margin: 0; padding: 0; }
+    11|    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; }
+    12|    .container { max-width: 640px; margin: 0 auto; padding: 24px; }
+    13|    .header { text-align: center; padding: 32px 0; }
+    14|    .header h1 { font-size: 24px; font-weight: 800; }
+    15|    .header span { color: #2563eb; }
+    16|    .card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px; margin-bottom: 16px; }
+    17|    .card h2 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    18|    .card .price { font-size: 28px; font-weight: 900; color: #2563eb; }
+    19|    .card .old-price { font-size: 14px; color: #94a3b8; text-decoration: line-through; }
+    20|    .card .items { font-size: 14px; color: #64748b; margin: 12px 0; line-height: 1.6; }
+    21|    .paypal-btn {
+    22|      display: block; width: 100%; padding: 16px; background: #0070ba; color: white;
+    23|      font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;
+    24|      text-align: center; text-decoration: none; transition: background 0.2s;
+    25|    }
+    26|    .paypal-btn:hover { background: #005ea6; }
+    27|    .note { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 8px; }
+    28|    .back { display: block; text-align: center; margin-top: 24px; color: #2563eb; text-decoration: none; font-size: 14px; }
+    29|    .trust { display: flex; justify-content: center; gap: 16px; margin-top: 24px; font-size: 12px; color: #64748b; flex-wrap: wrap; }
+    30|    footer { text-align: center; padding: 32px 0; font-size: 13px; color: #94a3b8; }
+    31|    .pro-badge { font-size:11px;background:#f59e0b;color:#0f172a;padding:3px 10px;border-radius:999px;font-weight:700;vertical-align:middle;margin-left:8px; }
+    32|  </style>
+    33|</head>
+    34|<body>
+    35|  <div class="container">
+    36|    <div class="header">
+    37|      <h1>💧 PrimeWash<span>Gear</span></h1>
+    38|      <p style="color:#64748b;font-size:14px;">Secure checkout — pay with credit card, Afterpay, Apple Pay & more</p>
+    39|    </div>
+    40|
+    41|    <div class="card" style="border-color:#f59e0b;border-width:2px;">
+    42|      <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px;">
+    43|        <div>
+    44|          <h2>💪 Pro Pack <span class="pro-badge">MOST POPULAR</span></h2>
+    45|          <div class="items">
+    46|            Turbo Nozzle + Foam Cannon + 15m Steel Hose<br>
+    47|            Brass Connectors (10-pack) + Surface Cleaner + Wash Brush
+    48|          </div>
+    49|        </div>
+    50|        <div style="text-align:right;">
+    51|          <div class="price">$174.99</div>
+    52|          <div class="old-price">Was $397.72</div>
+    53|          <div style="font-size:12px;color:#16a34a;font-weight:700;">Save $222.73 (56%)</div>
+    54|        </div>
+    55|      </div>
+    56|      <p style="font-size:13px;color:#64748b;margin:12px 0;">AU shipping included. Ships from Melbourne. 30-day guarantee.</p>
+    57|      <a href="https://buy.stripe.com/test_5kQ3cugIp0HA45x7Ks4Rq00" class="paypal-btn" target="_blank" id="proPackBtn">
+    58|        Buy Now $174.99 AUD
+    59|      </a>
+    60|      <div class="note">Visa • Mastercard • Amex • Afterpay • Apple Pay • Google Pay</div>
+    61|    </div>
+    62|
+    63|    <div class="card">
+    64|      <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px;">
+    65|        <div>
+    66|          <h2>🚀 Starter Kit</h2>
+    67|          <div class="items">
+    68|            5-in-1 Nozzle Set + Turbo Nozzle + Brass Couplers + 10m Hose + Spray Gun
+    69|          </div>
+    70|        </div>
+    71|        <div style="text-align:right;">
+    72|          <div class="price">$99.00</div>
+    73|          <div class="old-price">Was $159.94</div>
+    74|          <div style="font-size:12px;color:#16a34a;font-weight:700;">Save $60.94 (38%)</div>
+    75|        </div>
+    76|      </div>
+    77|      <a href="https://buy.stripe.com/test_5kQ3cugIp0HA45x7Ks4Rq00" class="paypal-btn" target="_blank" id="starterBtn">
+    78|        Buy Now $99.00 AUD
+    79|      </a>
+    80|    </div>
+    81|
+    82|    <div class="card">
+    83|      <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px;">
+    84|        <div>
+    85|          <h2>🔧 Maintenance Pack</h2>
+    86|          <div class="items">
+    87|            Pump Oil (1L) + Inlet Filters (5-pack) + O-Ring Kit (100+ pc)
+    88|          </div>
+    89|        </div>
+    90|        <div style="text-align:right;">
+    91|          <div class="price">$44.99</div>
+    92|          <div class="old-price">Was $62.46</div>
+    93|          <div style="font-size:12px;color:#16a34a;font-weight:700;">Save $17.47 (28%)</div>
+    94|        </div>
+    95|      </div>
+    96|      <p style="font-size:12px;color:#64748b;margin:8px 0;">Reorder every 3 months — keeps your pressure washer running like new</p>
+    97|      <a href="https://buy.stripe.com/test_5kQ3cugIp0HA45x7Ks4Rq00" class="paypal-btn" target="_blank" id="maintBtn">
+    98|        Buy Now $44.99 AUD
+    99|      </a>
+   100|    </div>
+   101|
+   102|    <div class="trust">
+   103|      <span>Stripe Secure</span>
+   104|      <span>Free AU Shipping</span>
+   105|      <span>30-Day Returns</span>
+   106|      <span>Melbourne Based</span>
+   107|    </div>
+   108|    <a href="https://edinsonmipc-oss.github.io/primewashgear/" class="back">Back to Store</a>
+   109|    <footer>
+   110|      <p>PrimeWash Gear Australia · Notting Hill VIC 3168 · 0406 170 544</p>
+   111|      <p style="margin-top:4px;">Questions? Text or call — we reply fast.</p>
+   112|    </footer>
+   113|  </div>
+   114|</body>
+   115|</html>
