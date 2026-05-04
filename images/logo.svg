@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <rect width="400" height="120" fill="#0f172a" rx="12"/>
+  <text x="40" y="75" font-size="50">💧</text>
+  <text x="90" y="70" font-weight="800" font-family="Inter, sans-serif" font-size="32" fill="white">PrimeWash</text>
+  <text x="280" y="70" font-weight="800" font-family="Inter, sans-serif" font-size="32" fill="#2563eb">Gear</text>
+  <text x="90" y="95" font-family="Inter, sans-serif" font-size="13" fill="#94a3b8">AUSTRALIAN TRADIE OWNED</text>
+</svg>
