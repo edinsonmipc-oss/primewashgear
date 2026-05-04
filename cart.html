@@ -1,159 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping Cart — PrimeWash Gear Australia</title>
-  <meta name="description" content="Review your cart and checkout securely at PrimeWash Gear Australia. Afterpay, Zip Pay & Credit Card accepted." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
-</head>
-<body>
-
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement">
-  🇦🇺 Free shipping on orders over $50 — Melbourne metro delivers next day!
-  <a href="shop.html">Shop Now →</a>
-</div>
-
-<!-- NAVIGATION -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">💧</div>
-      PrimeWash<span>Gear</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="shop.html#bundles">Bundles</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="nav-cart" onclick="window.location.href='cart.html'" aria-label="Cart">
-        🛒 <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
-    </div>
-  </div>
-</nav>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="index.html">🏠 Home</a>
-  <a href="shop.html">🛍️ Shop</a>
-  <a href="shop.html#bundles">📦 Bundles</a>
-  <a href="about.html">ℹ️ About</a>
-  <a href="contact.html">📞 Contact</a>
-</div>
-
-<!-- PAGE HEADER -->
-<section class="page-header">
-  <div class="container">
-    <h1>🛒 Shopping Cart</h1>
-    <p>Review your items before checking out</p>
-  </div>
-</section>
-
-<!-- CART SECTION -->
-<section class="cart-page">
-  <div class="container">
-    <div class="cart-layout">
-      <div id="cartContainer">
-        <!-- Cart items + summary rendered by JS -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST BAR -->
-<section class="trust-bar">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item"><span class="trust-icon">🇦🇺</span> Australian Owned</div>
-      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping Over $50</div>
-      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Dispatch</div>
-      <div class="trust-item"><span class="trust-icon">🔄</span> 30-Day Returns</div>
-      <div class="trust-item"><span class="trust-icon">💳</span> Afterpay + Zip Pay</div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="container">
-    <h2>📬 Get Tradie Tips & Deals</h2>
-    <p>Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
-    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing! 🎉');">
-      <input type="email" placeholder="Your email address" required />
-      <button type="submit">Subscribe →</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>💧 PrimeWash<span>Gear</span></h3>
-        <p>Australia's go-to for pressure washer parts, consumables, and tradie kits. Based in Notting Hill, Melbourne. Fast shipping across AU.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="TikTok">🎵</a>
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="YouTube">▶️</a>
-          <a href="#" aria-label="Facebook">👍</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Products</a></li>
-          <li><a href="shop.html#bundles">Bundles</a></li>
-          <li><a href="shop.html">Nozzles</a></li>
-          <li><a href="shop.html">Hoses</a></li>
-          <li><a href="shop.html">Maintenance Kits</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns</a></li>
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|  <meta charset="UTF-8" />
+     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     6|  <title>Shopping Cart — PrimeWash Gear Australia</title>
+     7|  <meta name="description" content="Review your cart and checkout securely at PrimeWash Gear Australia. Afterpay, Zip Pay & Credit Card accepted." />
+     8|  <link rel="preconnect" href="https://fonts.googleapis.com" />
+     9|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    10|  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    11|  <link rel="stylesheet" href="css/style.css" />
+    12|  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
+    13|</head>
+    14|<body>
+    15|
+    16|<!-- ANNOUNCEMENT BAR -->
+    17|<div class="announcement">
+    18|  🇦🇺 Free shipping on orders over $50 — Melbourne metro delivers next day!
+    19|  <a href="shop.html">Shop Now →</a>
+    20|</div>
+    21|
+    22|<!-- NAVIGATION -->
+    23|<nav class="nav">
+    24|  <div class="nav-inner">
+    25|    <a href="index.html" class="nav-logo">
+    26|      <div class="nav-logo-icon">💧</div>
+    27|      PrimeWash<span>Gear</span>
+    28|    </a>
+    29|    <ul class="nav-links">
+    30|      <li><a href="index.html">Home</a></li>
+    31|      <li><a href="shop.html">Shop</a></li>
+    32|      <li><a href="shop.html#bundles">Bundles</a></li>
+    33|      <li><a href="about.html">About</a></li>
+    34|      <li><a href="contact.html">Contact</a></li>
+    35|    </ul>
+    36|    <div class="nav-actions">
+    37|      <button class="nav-cart" onclick="window.location.href='cart.html'" aria-label="Cart">
+    38|        🛒 <span class="cart-count" id="cartCount">0</span>
+    39|      </button>
+    40|      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+    41|    </div>
+    42|  </div>
+    43|</nav>
+    44|
+    45|<!-- MOBILE NAV -->
+    46|<div class="mobile-nav" id="mobileNav">
+    47|  <a href="index.html">🏠 Home</a>
+    48|  <a href="shop.html">🛍️ Shop</a>
+    49|  <a href="shop.html#bundles">📦 Bundles</a>
+    50|  <a href="about.html">ℹ️ About</a>
+    51|  <a href="contact.html">📞 Contact</a>
+    52|</div>
+    53|
+    54|<!-- PAGE HEADER -->
+    55|<section class="page-header">
+    56|  <div class="container">
+    57|    <h1>🛒 Shopping Cart</h1>
+    58|    <p>Review your items before checking out</p>
+    59|  </div>
+    60|</section>
+    61|
+    62|<!-- CART SECTION -->
+    63|<section class="cart-page">
+    64|  <div class="container">
+    65|    <div class="cart-layout">
+    66|      <div id="cartContainer">
+    67|        <!-- Cart items + summary rendered by JS -->
+    68|      </div>
+    69|    </div>
+    70|  </div>
+    71|</section>
+    72|
+    73|<!-- TRUST BAR -->
+    74|<section class="trust-bar">
+    75|  <div class="container">
+    76|    <div class="trust-grid">
+    77|      <div class="trust-item"><span class="trust-icon">🇦🇺</span> Australian Owned</div>
+    78|      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping Over $50</div>
+    79|      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Dispatch</div>
+    80|      <div class="trust-item"><span class="trust-icon">🔄</span> 30-Day Returns</div>
+    81|      <div class="trust-item"><span class="trust-icon">💳</span> Afterpay + Zip Pay</div>
+    82|    </div>
+    83|  </div>
+    84|</section>
+    85|
+    86|<!-- NEWSLETTER -->
+    87|<section class="newsletter">
+    88|  <div class="container">
+    89|    <h2>📬 Get Tradie Tips & Deals</h2>
+    90|    <p>Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
+    91|    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing! 🎉');">
+    92|      <input type="email" placeholder="Your email address" required />
+    93|      <button type="submit">Subscribe →</button>
+    94|    </form>
+    95|  </div>
+    96|</section>
+    97|
+    98|<!-- FOOTER -->
+    99|<footer class="footer">
+   100|  <div class="container">
+   101|    <div class="footer-grid">
+   102|      <div class="footer-brand">
+   103|        <h3>💧 PrimeWash<span>Gear</span></h3>
+   104|        <p>Australia's go-to for pressure washer parts, consumables, and tradie kits. Based in Notting Hill, Melbourne. Fast shipping across AU.</p>
+   105|        <div class="footer-social">
+   106|          <a href="#" aria-label="TikTok">🎵</a>
+   107|          <a href="#" aria-label="Instagram">📸</a>
+   108|          <a href="#" aria-label="YouTube">▶️</a>
+   109|          <a href="#" aria-label="Facebook">👍</a>
+   110|        </div>
+   111|      </div>
+   112|      <div class="footer-col">
+   113|        <h4>Shop</h4>
+   114|        <ul>
+   115|          <li><a href="shop.html">All Products</a></li>
+   116|          <li><a href="shop.html#bundles">Bundles</a></li>
+   117|          <li><a href="shop.html">Nozzles</a></li>
+   118|          <li><a href="shop.html">Hoses</a></li>
+   119|          <li><a href="shop.html">Maintenance Kits</a></li>
+   120|        </ul>
+   121|      </div>
+   122|      <div class="footer-col">
+   123|        <h4>Support</h4>
+   124|        <ul>
+   125|          <li><a href="contact.html">Contact Us</a></li>
+   126|          <li><a href="#">Shipping Info</a></li>
+   127|          <li><a href="#">Returns</a></li>
+   128|          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="returns.html">Returns</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Track Order</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Tradie Pro Program</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 PrimeWash Gear Australia. ABN: XX XXX XXX XXX</p>
-      <div class="footer-payment">
-        <span>💳</span>
-        <span>🏦</span>
-        <span>📱</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- TOAST CONTAINER -->
-<div class="toast-container" id="toastContainer"></div>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+   129|          <li><a href="#">Track Order</a></li>
+   130|        </ul>
+   131|      </div>
+   132|      <div class="footer-col">
+   133|        <h4>Company</h4>
+   134|        <ul>
+   135|          <li><a href="about.html">About Us</a></li>
+   136|          <li><a href="#">Blog</a></li>
+   137|          <li><a href="#">Tradie Pro Program</a></li>
+   138|          <li><a href="#">Privacy Policy</a></li>
+   139|          <li><a href="#">Terms</a></li>
+   140|        </ul>
+   141|      </div>
+   142|    </div>
+   143|    <div class="footer-bottom">
+   144|      <p>© 2026 PrimeWash Gear Australia. ABN: XX XXX XXX XXX</p>
+   145|      <div class="footer-payment">
+   146|        <span>💳</span>
+   147|        <span>🏦</span>
+   148|        <span>📱</span>
+   149|      </div>
+   150|    </div>
+   151|  </div>
+   152|</footer>
+   153|
+   154|<!-- TOAST CONTAINER -->
+   155|<div class="toast-container" id="toastContainer"></div>
+   156|
+   157|<script src="js/main.js"></script>
+   158|</body>
+   159|</html>
+   160|

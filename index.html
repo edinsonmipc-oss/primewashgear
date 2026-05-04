@@ -1,351 +1,359 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PrimeWash Gear Australia — Pressure Washer Parts for Tradies</title>
-  <meta name="description" content="Australia's tradie-owned pressure washer parts store. Turbo nozzles, foam cannons, hoses & kits. Same-day dispatch from Melbourne. 30-day guarantee." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
-</head>
-<body>
-
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement">
-  🇦🇺 Free shipping over $50 • Melbourne metro next day • 30-day guarantee &nbsp;<strong>—</strong>&nbsp; <a href="shop.html#bundles">Shop Bundles →</a>
+     1|     1|<!DOCTYPE html>
+     2|     2|<html lang="en">
+     3|     3|<head>
+     4|     4|  <meta charset="UTF-8" />
+     5|     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     6|     6|  <title>PrimeWash Gear Australia — Pressure Washer Parts for Tradies</title>
+     7|     7|  <meta name="description" content="Australia's tradie-owned pressure washer parts store. Turbo nozzles, foam cannons, hoses & kits. Same-day dispatch from Melbourne. 30-day guarantee." />
+     8|     8|  <link rel="preconnect" href="https://fonts.googleapis.com" />
+     9|     9|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    10|    10|  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    11|    11|  <link rel="stylesheet" href="css/style.css" />
+    12|    12|  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
+    13|    13|</head>
+    14|    14|<body>
+    15|    15|
+    16|    16|<!-- ANNOUNCEMENT BAR -->
+    17|    17|<div class="announcement">
+    18|    18|  🇦🇺 Free shipping over $50 • Melbourne metro next day • 30-day guarantee &nbsp;<strong>—</strong>&nbsp; <a href="payments/checkout.html">Buy Now with PayPal →</a>
+    19|    19|</div>
+    20|    20|
+    21|    21|<!-- NAVIGATION -->
+    22|    22|<nav class="nav">
+    23|    23|  <div class="nav-inner">
+    24|    24|    <a href="index.html" class="nav-logo">
+    25|    25|      <div class="nav-logo-icon">💧</div>
+    26|    26|      PrimeWash<span>Gear</span>
+    27|    27|    </a>
+    28|    28|    <ul class="nav-links">
+    29|    29|      <li><a href="index.html" class="active">Home</a></li>
+    30|    30|      <li><a href="shop.html">Shop</a></li>
+    31|    31|      <li><a href="shop.html#bundles">Bundles</a></li>
+    32|    32|      <li><a href="about.html">About</a></li>
+    33|    33|      <li><a href="contact.html">Contact</a></li>
+    34|    34|    </ul>
+    35|    35|    <div class="nav-actions">
+    36|    36|      <button class="nav-cart" onclick="window.location.href='cart.html'" aria-label="Cart">
+    37|    37|        🛒 <span class="cart-count" id="cartCount">0</span>
+    38|    38|      </button>
+    39|    39|      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+    40|    40|    </div>
+    41|    41|  </div>
+    42|    42|</nav>
+    43|    43|
+    44|    44|<!-- MOBILE NAV -->
+    45|    45|<div class="mobile-nav" id="mobileNav">
+    46|    46|  <a href="index.html">🏠 Home</a>
+    47|    47|  <a href="shop.html">🛍️ Shop</a>
+    48|    48|  <a href="shop.html#bundles">📦 Bundles</a>
+    49|    49|  <a href="about.html">ℹ️ About</a>
+    50|    50|  <a href="contact.html">📞 Contact</a>
+    51|    51|</div>
+    52|    52|
+    53|    53|<!-- HERO -->
+    54|    54|<section class="hero">
+    55|    55|  <div class="container">
+    56|    56|    <div class="hero-grid">
+    57|    57|      <div class="hero-text">
+    58|    58|        <div class="hero-tag">🇦🇺 Australian Tradie Owned & Operated</div>
+    59|    59|        <h1>Stop Overpaying for <span>Pressure Washer Parts</span></h1>
+    60|    60|        <p>Premium nozzles, hoses, fittings & bundles for tradies who demand reliability. Same-day dispatch from Notting Hill, Melbourne. No bullshit markups — just gear that works.</p>
+    61|    61|        <div class="hero-buttons">
+    62|    62|          <a href="shop.html#bundles" class="btn btn-accent btn-lg">🎯 Shop Tradie Bundles</a>
+    63|    63|          <a href="shop.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:white;">Browse All Products →</a>
+    64|    64|        </div>
+    65|    65|        <div class="hero-stats">
+    66|    66|          <div><div class="hero-stat-value">1-3 Days</div><div class="hero-stat-label">Delivery Metro Melbourne</div></div>
+    67|    67|          <div><div class="hero-stat-value">$50+</div><div class="hero-stat-label">Free Shipping Australia-Wide</div></div>
+    68|    68|          <div><div class="hero-stat-value">100%</div><div class="hero-stat-label">30-Day Satisfaction Guarantee</div></div>
+    69|    69|        </div>
+    70|    70|      </div>
+    71|    71|      <div class="hero-image">
+    72|    72|        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S6ed4cbab10b54397bd45040e94440d93u.jpg_480x480q75.jpg_.avif"
+    73|    73|             alt="Turbo Nozzle — Pressure Washer" class="hero-image-main" />
+    74|    74|        <div class="hero-badge">
+    75|    75|          <span class="hero-badge-icon">⭐</span>
+    76|    76|          <div>
+    77|    77|            <div class="hero-badge-text">Tradie's Choice</div>
+    78|    78|            <div class="hero-badge-sub">4.9 ★ from 200+ reviews</div>
+    79|    79|          </div>
+    80|    80|        </div>
+    81|    81|      </div>
+    82|    82|    </div>
+    83|    83|  </div>
+    84|    84|</section>
+    85|    85|
+    86|    86|<!-- TRUST BAR -->
+    87|    87|<section class="trust-bar">
+    88|    88|  <div class="container">
+    89|    89|    <div class="trust-grid">
+    90|    90|      <div class="trust-item"><span class="trust-icon">🇦🇺</span> Australian Owned</div>
+    91|    91|      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping Over $50</div>
+    92|    92|      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Dispatch</div>
+    93|    93|      <div class="trust-item"><span class="trust-icon">🔄</span> 30-Day Returns</div>
+    94|    94|      <div class="trust-item"><span class="trust-icon">💳</span> PayPal + Afterpay</div>
+    95|    95|    </div>
+    96|    96|  </div>
+    97|    97|</section>
+    98|    98|
+    99|    99|<!-- BUNDLES SECTION — FIRST -->
+   100|   100|<section class="bundles-section" id="bundles">
+   101|   101|  <div class="container">
+   102|   102|    <h2 class="section-title" style="text-align:center;">🎯 Tradie Bundles — Save Up to 56%</h2>
+   103|   103|    <p class="section-subtitle" style="text-align:center;">Buying individual parts adds up. Our bundles are built by a tradie who knows what you actually need on the job. Everything in one box, shipped from Melbourne.</p>
+   104|   104|    <div class="bundles-grid" id="bundlesGrid">
+   105|   105|      <!-- Injected by JS -->
+   106|   106|    </div>
+   107|   107|    <div style="text-align:center;">
+  <a href="payments/checkout.html" class="btn btn-accent" style="font-size:18px;padding:18px 40px;margin-bottom:20px;">
+    Buy Now with PayPal
+  </a>
 </div>
-
-<!-- NAVIGATION -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">💧</div>
-      PrimeWash<span>Gear</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="shop.html#bundles">Bundles</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="nav-cart" onclick="window.location.href='cart.html'" aria-label="Cart">
-        🛒 <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
-    </div>
-  </div>
-</nav>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="index.html">🏠 Home</a>
-  <a href="shop.html">🛍️ Shop</a>
-  <a href="shop.html#bundles">📦 Bundles</a>
-  <a href="about.html">ℹ️ About</a>
-  <a href="contact.html">📞 Contact</a>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <div class="hero-tag">🇦🇺 Australian Tradie Owned & Operated</div>
-        <h1>Stop Overpaying for <span>Pressure Washer Parts</span></h1>
-        <p>Premium nozzles, hoses, fittings & bundles for tradies who demand reliability. Same-day dispatch from Notting Hill, Melbourne. No bullshit markups — just gear that works.</p>
-        <div class="hero-buttons">
-          <a href="shop.html#bundles" class="btn btn-accent btn-lg">🎯 Shop Tradie Bundles</a>
-          <a href="shop.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:white;">Browse All Products →</a>
-        </div>
-        <div class="hero-stats">
-          <div><div class="hero-stat-value">1-3 Days</div><div class="hero-stat-label">Delivery Metro Melbourne</div></div>
-          <div><div class="hero-stat-value">$50+</div><div class="hero-stat-label">Free Shipping Australia-Wide</div></div>
-          <div><div class="hero-stat-value">100%</div><div class="hero-stat-label">30-Day Satisfaction Guarantee</div></div>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S6ed4cbab10b54397bd45040e94440d93u.jpg_480x480q75.jpg_.avif"
-             alt="Turbo Nozzle — Pressure Washer" class="hero-image-main" />
-        <div class="hero-badge">
-          <span class="hero-badge-icon">⭐</span>
-          <div>
-            <div class="hero-badge-text">Tradie's Choice</div>
-            <div class="hero-badge-sub">4.9 ★ from 200+ reviews</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST BAR -->
-<section class="trust-bar">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item"><span class="trust-icon">🇦🇺</span> Australian Owned</div>
-      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping Over $50</div>
-      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Dispatch</div>
-      <div class="trust-item"><span class="trust-icon">🔄</span> 30-Day Returns</div>
-      <div class="trust-item"><span class="trust-icon">💳</span> Afterpay + Zip Pay</div>
-    </div>
-  </div>
-</section>
-
-<!-- BUNDLES SECTION — FIRST -->
-<section class="bundles-section" id="bundles">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center;">🎯 Tradie Bundles — Save Up to 56%</h2>
-    <p class="section-subtitle" style="text-align:center;">Buying individual parts adds up. Our bundles are built by a tradie who knows what you actually need on the job. Everything in one box, shipped from Melbourne.</p>
-    <div class="bundles-grid" id="bundlesGrid">
-      <!-- Injected by JS -->
-    </div>
-    <div style="text-align:center;margin-top:32px;">
-      <p style="font-size:14px;color:var(--gray-600);">💡 <strong>Pro tip:</strong> The Pro Pack saves you $222 vs buying individually. Most tradies order this + the Maintenance Pack for a complete setup.</p>
-    </div>
-  </div>
-</section>
-
-<!-- REAL RESULTS: BEFORE / AFTER -->
-<section class="benefits" style="background:var(--dark);">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center;color:white;">🔨 Real Results from Real Jobs</h2>
-    <p class="section-subtitle" style="text-align:center;color:var(--gray-400);">This is what PrimeWash Gear looks like in action. Real tradies, real before & afters.</p>
-    <div class="results-grid">
-      <div class="result-card">
-        <div class="result-images">
-          <div class="result-before" style="background:linear-gradient(135deg,#334155,#1e293b);">
-            <span class="result-label">BEFORE</span>
-            <span style="font-size:3rem;display:block;margin-top:20px;">🧹</span>
-            <p style="font-size:13px;margin-top:12px;opacity:0.7;">10-year-old concrete driveway — oil stains, moss, grime</p>
-          </div>
-          <div class="result-after" style="background:linear-gradient(135deg,#166534,#14532d);">
-            <span class="result-label" style="background:var(--green);">AFTER</span>
-            <span style="font-size:3rem;display:block;margin-top:20px;">✨</span>
-            <p style="font-size:13px;margin-top:12px;opacity:0.9;">Turbo Nozzle + Surface Cleaner — 45 minutes, no chemicals</p>
-          </div>
-        </div>
-        <p class="result-testimony">"Turbo nozzle + patio cleaner ripped through this driveway in under an hour. Customer couldn't believe it."<br><strong>— Dave P., Landscaper, Geelong VIC</strong></p>
-      </div>
-      <div class="result-card">
-        <div class="result-images">
-          <div class="result-before" style="background:linear-gradient(135deg,#334155,#1e293b);">
-            <span class="result-label">BEFORE</span>
-            <span style="font-size:3rem;display:block;margin-top:20px;">🟤</span>
-            <p style="font-size:13px;margin-top:12px;opacity:0.7;">Patio pavers — dirt build-up, weed growth in joints</p>
-          </div>
-          <div class="result-after" style="background:linear-gradient(135deg,#166534,#14532d);">
-            <span class="result-label" style="background:var(--green);">AFTER</span>
-            <span style="font-size:3rem;display:block;margin-top:20px;">🧼</span>
-            <p style="font-size:13px;margin-top:12px;opacity:0.9;">Foam Cannon pre-soak + 15° nozzle — like new in 30 min</p>
-          </div>
-        </div>
-        <p class="result-testimony">"Snow foam cannon lifted everything. Spray on, let it sit, rinse off. Best $30 I've spent on gear."<br><strong>— Steve R., Property Maintenance, Melbourne VIC</strong></p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="shop.html" class="btn btn-accent btn-lg">Get Your Gear →</a>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section class="products-section">
-  <div class="container">
-    <div class="products-header">
-      <div>
-        <h2 class="section-title">🔥 Bestselling Parts</h2>
-        <p class="section-subtitle">The individual parts tradies buy most. Real gear, real reviews.</p>
-      </div>
-      <a href="shop.html" class="btn btn-outline">View All Products →</a>
-    </div>
-    <div class="products-grid" id="featuredProducts">
-      <!-- Injected by JS -->
-    </div>
-  </div>
-</section>
-
-<!-- WHY PRIMEWASH -->
-<section class="benefits">
-  <div class="container">
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">🏭</div>
-        <h3>Sourced by Tradies</h3>
-        <p>Every product is tested on real Melbourne job sites. If it doesn't survive a week of commercial use, we don't sell it.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🚚</div>
-        <h3>Fast AU Shipping</h3>
-        <p>Same-day dispatch from Notting Hill VIC. Metro Melbourne next day. Regional AU 2-5 days. Free over $50.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🔄</div>
-        <h3>30-Day Guarantee</h3>
-        <p>Not happy? Send it back. No questions, no hassle. We'd rather you love your gear.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">💰</div>
-        <h3>Fair Dinkum Pricing</h3>
-        <p>No bullshit markups. Compare with Bunnings, Sydney Tools, or Total Tools — you'll see the difference.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center;">💬 What Tradies Say</h2>
-    <p class="section-subtitle" style="text-align:center;">Real reviews from real customers.</p>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Bought the Pro Pack for my crew. Saved a fortune vs buying from Bunnings individually. Surface cleaner is a beast on concrete. Next day delivery to Sunshine Coast."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#dbeafe;color:#2563eb;">J</div>
-          <div><div class="review-name">Jake M.</div><div class="review-role">Concreter, Sunshine Coast QLD</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Maintenance Pack is a ripper. Set a reminder every 3 months — my Karcher hasn't missed a beat in 2 years. Oil + filters + o-rings, all in one box."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#fce7f3;color:#db2777;">S</div>
-          <div><div class="review-name">Steve R.</div><div class="review-role">Property Maintenance, Melbourne VIC</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Ordered the turbo nozzle at 3pm, arrived next morning in Geelong. Solid brass construction — way better than the plastic junk at Total Tools."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#fef3c7;color:#d97706;">D</div>
-          <div><div class="review-name">Dave P.</div><div class="review-role">Landscaper, Geelong VIC</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SHIPPING & GUARANTEE DETAIL -->
-<section style="padding:48px 0;background:white;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);">
-  <div class="container">
-    <div class="shipping-detail">
-      <div class="shipping-col">
-        <h4>🚚 Shipping</h4>
-        <ul style="list-style:none;font-size:14px;color:var(--gray-600);line-height:2;">
-          <li>✅ <strong>Free</strong> on all orders over $50</li>
-          <li>✅ Melbourne metro: <strong>next day</strong></li>
-          <li>✅ Regional VIC / NSW / QLD: <strong>2-3 days</strong></li>
-          <li>✅ WA / NT / TAS: <strong>4-7 days</strong></li>
-          <li>✅ All orders ship from <strong>Notting Hill, VIC</strong></li>
-        </ul>
-      </div>
-      <div class="shipping-col">
-        <h4>🔄 30-Day Guarantee</h4>
-        <ul style="list-style:none;font-size:14px;color:var(--gray-600);line-height:2;">
-          <li>✅ Not happy? <strong>Full refund</strong> within 30 days</li>
-          <li>✅ No questions asked — we mean it</li>
-          <li>✅ <strong>Free returns</strong> on faulty items</li>
-          <li>✅ We ship a replacement <strong>before</strong> you send the faulty one back</li>
-          <li>✅ That's the tradie way — no corporate runaround</li>
-        </ul>
-      </div>
-      <div class="shipping-col">
-        <h4>💳 Pay Your Way</h4>
-        <ul style="list-style:none;font-size:14px;color:var(--gray-600);line-height:2;">
-          <li>✅ Credit Card (Visa / MC / Amex)</li>
-          <li>✅ PayPal</li>
-          <li>✅ <strong>Afterpay</strong> — 4 interest-free payments</li>
-          <li>✅ <strong>Zip Pay</strong> — buy now, pay later</li>
-          <li>✅ All payments <strong>secure & encrypted</strong></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <style>
-    .shipping-detail { display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px; }
-    .shipping-col h4 { font-size:16px;font-weight:700;color:var(--dark);margin-bottom:12px; }
-    @media (max-width:768px) { .shipping-detail { grid-template-columns:1fr;gap:24px; } }
-  </style>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="container">
-    <h2>📬 Get Tradie Tips & Deals</h2>
-    <p>Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
-    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks for subscribing! 🎉');">
-      <input type="email" placeholder="Your email address" required />
-      <button type="submit">Subscribe →</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>💧 PrimeWash<span>Gear</span></h3>
-        <p>Australia's go-to for pressure washer parts, consumables, and tradie kits. Based in Notting Hill, Melbourne. Fast shipping across AU.</p>
-        <p style="margin-top:12px;font-size:13px;">📞 <a href="tel:+61406170544" style="color:var(--gray-400);">0406 170 544</a><br />📍 10 Elwood St, Notting Hill VIC 3168</p>
-        <div class="footer-social">
-          <a href="#" aria-label="TikTok">🎵</a>
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="YouTube">▶️</a>
-          <a href="#" aria-label="Facebook">👍</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Products</a></li>
-          <li><a href="shop.html#bundles">🎯 Bundles</a></li>
-          <li><a href="shop.html">Nozzles</a></li>
-          <li><a href="shop.html">Hoses</a></li>
-          <li><a href="shop.html">Maintenance Kits</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Track Order</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Tradie Pro Program</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 PrimeWash Gear Australia. Built by a tradie, for tradies.</p>
-      <div class="footer-payment">
-        <span>💳</span>
-        <span>🏦</span>
-        <span>📱</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- TOAST CONTAINER -->
-<div class="toast-container" id="toastContainer"></div>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+<div style="text-align:center;margin-top:32px;">
+   108|   108|      <p style="font-size:14px;color:var(--gray-600);">💡 <strong>Pro tip:</strong> The Pro Pack saves you $222 vs buying individually. Most tradies order this + the Maintenance Pack for a complete setup.</p>
+   109|   109|    </div>
+   110|   110|  </div>
+   111|   111|</section>
+   112|   112|
+   113|   113|<!-- REAL RESULTS: BEFORE / AFTER -->
+   114|   114|<section class="benefits" style="background:var(--dark);">
+   115|   115|  <div class="container">
+   116|   116|    <h2 class="section-title" style="text-align:center;color:white;">🔨 Real Results from Real Jobs</h2>
+   117|   117|    <p class="section-subtitle" style="text-align:center;color:var(--gray-400);">This is what PrimeWash Gear looks like in action. Real tradies, real before & afters.</p>
+   118|   118|    <div class="results-grid">
+   119|   119|      <div class="result-card">
+   120|   120|        <div class="result-images">
+   121|   121|          <div class="result-before" style="background:linear-gradient(135deg,#334155,#1e293b);">
+   122|   122|            <span class="result-label">BEFORE</span>
+   123|   123|            <span style="font-size:3rem;display:block;margin-top:20px;">🧹</span>
+   124|   124|            <p style="font-size:13px;margin-top:12px;opacity:0.7;">10-year-old concrete driveway — oil stains, moss, grime</p>
+   125|   125|          </div>
+   126|   126|          <div class="result-after" style="background:linear-gradient(135deg,#166534,#14532d);">
+   127|   127|            <span class="result-label" style="background:var(--green);">AFTER</span>
+   128|   128|            <span style="font-size:3rem;display:block;margin-top:20px;">✨</span>
+   129|   129|            <p style="font-size:13px;margin-top:12px;opacity:0.9;">Turbo Nozzle + Surface Cleaner — 45 minutes, no chemicals</p>
+   130|   130|          </div>
+   131|   131|        </div>
+   132|   132|        <p class="result-testimony">"Turbo nozzle + patio cleaner ripped through this driveway in under an hour. Customer couldn't believe it."<br><strong>— Dave P., Landscaper, Geelong VIC</strong></p>
+   133|   133|      </div>
+   134|   134|      <div class="result-card">
+   135|   135|        <div class="result-images">
+   136|   136|          <div class="result-before" style="background:linear-gradient(135deg,#334155,#1e293b);">
+   137|   137|            <span class="result-label">BEFORE</span>
+   138|   138|            <span style="font-size:3rem;display:block;margin-top:20px;">🟤</span>
+   139|   139|            <p style="font-size:13px;margin-top:12px;opacity:0.7;">Patio pavers — dirt build-up, weed growth in joints</p>
+   140|   140|          </div>
+   141|   141|          <div class="result-after" style="background:linear-gradient(135deg,#166534,#14532d);">
+   142|   142|            <span class="result-label" style="background:var(--green);">AFTER</span>
+   143|   143|            <span style="font-size:3rem;display:block;margin-top:20px;">🧼</span>
+   144|   144|            <p style="font-size:13px;margin-top:12px;opacity:0.9;">Foam Cannon pre-soak + 15° nozzle — like new in 30 min</p>
+   145|   145|          </div>
+   146|   146|        </div>
+   147|   147|        <p class="result-testimony">"Snow foam cannon lifted everything. Spray on, let it sit, rinse off. Best $30 I've spent on gear."<br><strong>— Steve R., Property Maintenance, Melbourne VIC</strong></p>
+   148|   148|      </div>
+   149|   149|    </div>
+   150|   150|    <div style="text-align:center;margin-top:40px;">
+   151|   151|      <a href="shop.html" class="btn btn-accent btn-lg">Get Your Gear →</a>
+   152|   152|    </div>
+   153|   153|  </div>
+   154|   154|</section>
+   155|   155|
+   156|   156|<!-- FEATURED PRODUCTS -->
+   157|   157|<section class="products-section">
+   158|   158|  <div class="container">
+   159|   159|    <div class="products-header">
+   160|   160|      <div>
+   161|   161|        <h2 class="section-title">🔥 Bestselling Parts</h2>
+   162|   162|        <p class="section-subtitle">The individual parts tradies buy most. Real gear, real reviews.</p>
+   163|   163|      </div>
+   164|   164|      <a href="shop.html" class="btn btn-outline">View All Products →</a>
+   165|   165|    </div>
+   166|   166|    <div class="products-grid" id="featuredProducts">
+   167|   167|      <!-- Injected by JS -->
+   168|   168|    </div>
+   169|   169|  </div>
+   170|   170|</section>
+   171|   171|
+   172|   172|<!-- WHY PRIMEWASH -->
+   173|   173|<section class="benefits">
+   174|   174|  <div class="container">
+   175|   175|    <div class="benefits-grid">
+   176|   176|      <div class="benefit-card">
+   177|   177|        <div class="benefit-icon">🏭</div>
+   178|   178|        <h3>Sourced by Tradies</h3>
+   179|   179|        <p>Every product is tested on real Melbourne job sites. If it doesn't survive a week of commercial use, we don't sell it.</p>
+   180|   180|      </div>
+   181|   181|      <div class="benefit-card">
+   182|   182|        <div class="benefit-icon">🚚</div>
+   183|   183|        <h3>Fast AU Shipping</h3>
+   184|   184|        <p>Same-day dispatch from Notting Hill VIC. Metro Melbourne next day. Regional AU 2-5 days. Free over $50.</p>
+   185|   185|      </div>
+   186|   186|      <div class="benefit-card">
+   187|   187|        <div class="benefit-icon">🔄</div>
+   188|   188|        <h3>30-Day Guarantee</h3>
+   189|   189|        <p>Not happy? Send it back. No questions, no hassle. We'd rather you love your gear.</p>
+   190|   190|      </div>
+   191|   191|      <div class="benefit-card">
+   192|   192|        <div class="benefit-icon">💰</div>
+   193|   193|        <h3>Fair Dinkum Pricing</h3>
+   194|   194|        <p>No bullshit markups. Compare with Bunnings, Sydney Tools, or Total Tools — you'll see the difference.</p>
+   195|   195|      </div>
+   196|   196|    </div>
+   197|   197|  </div>
+   198|   198|</section>
+   199|   199|
+   200|   200|<!-- REVIEWS -->
+   201|   201|<section class="reviews">
+   202|   202|  <div class="container">
+   203|   203|    <h2 class="section-title" style="text-align:center;">💬 What Tradies Say</h2>
+   204|   204|    <p class="section-subtitle" style="text-align:center;">Real reviews from real customers.</p>
+   205|   205|    <div class="reviews-grid">
+   206|   206|      <div class="review-card">
+   207|   207|        <div class="review-stars">★★★★★</div>
+   208|   208|        <p class="review-text">"Bought the Pro Pack for my crew. Saved a fortune vs buying from Bunnings individually. Surface cleaner is a beast on concrete. Next day delivery to Sunshine Coast."</p>
+   209|   209|        <div class="review-author">
+   210|   210|          <div class="review-avatar" style="background:#dbeafe;color:#2563eb;">J</div>
+   211|   211|          <div><div class="review-name">Jake M.</div><div class="review-role">Concreter, Sunshine Coast QLD</div></div>
+   212|   212|        </div>
+   213|   213|      </div>
+   214|   214|      <div class="review-card">
+   215|   215|        <div class="review-stars">★★★★★</div>
+   216|   216|        <p class="review-text">"Maintenance Pack is a ripper. Set a reminder every 3 months — my Karcher hasn't missed a beat in 2 years. Oil + filters + o-rings, all in one box."</p>
+   217|   217|        <div class="review-author">
+   218|   218|          <div class="review-avatar" style="background:#fce7f3;color:#db2777;">S</div>
+   219|   219|          <div><div class="review-name">Steve R.</div><div class="review-role">Property Maintenance, Melbourne VIC</div></div>
+   220|   220|        </div>
+   221|   221|      </div>
+   222|   222|      <div class="review-card">
+   223|   223|        <div class="review-stars">★★★★★</div>
+   224|   224|        <p class="review-text">"Ordered the turbo nozzle at 3pm, arrived next morning in Geelong. Solid brass construction — way better than the plastic junk at Total Tools."</p>
+   225|   225|        <div class="review-author">
+   226|   226|          <div class="review-avatar" style="background:#fef3c7;color:#d97706;">D</div>
+   227|   227|          <div><div class="review-name">Dave P.</div><div class="review-role">Landscaper, Geelong VIC</div></div>
+   228|   228|        </div>
+   229|   229|      </div>
+   230|   230|    </div>
+   231|   231|  </div>
+   232|   232|</section>
+   233|   233|
+   234|   234|<!-- SHIPPING & GUARANTEE DETAIL -->
+   235|   235|<section style="padding:48px 0;background:white;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);">
+   236|   236|  <div class="container">
+   237|   237|    <div class="shipping-detail">
+   238|   238|      <div class="shipping-col">
+   239|   239|        <h4>🚚 Shipping</h4>
+   240|   240|        <ul style="list-style:none;font-size:14px;color:var(--gray-600);line-height:2;">
+   241|   241|          <li>✅ <strong>Free</strong> on all orders over $50</li>
+   242|   242|          <li>✅ Melbourne metro: <strong>next day</strong></li>
+   243|   243|          <li>✅ Regional VIC / NSW / QLD: <strong>2-3 days</strong></li>
+   244|   244|          <li>✅ WA / NT / TAS: <strong>4-7 days</strong></li>
+   245|   245|          <li>✅ All orders ship from <strong>Notting Hill, VIC</strong></li>
+   246|   246|        </ul>
+   247|   247|      </div>
+   248|   248|      <div class="shipping-col">
+   249|   249|        <h4>🔄 30-Day Guarantee</h4>
+   250|   250|        <ul style="list-style:none;font-size:14px;color:var(--gray-600);line-height:2;">
+   251|   251|          <li>✅ Not happy? <strong>Full refund</strong> within 30 days</li>
+   252|   252|          <li>✅ No questions asked — we mean it</li>
+   253|   253|          <li>✅ <strong>Free returns</strong> on faulty items</li>
+   254|   254|          <li>✅ We ship a replacement <strong>before</strong> you send the faulty one back</li>
+   255|   255|          <li>✅ That's the tradie way — no corporate runaround</li>
+   256|   256|        </ul>
+   257|   257|      </div>
+   258|   258|      <div class="shipping-col">
+   259|   259|        <h4>💳 Pay Your Way</h4>
+   260|   260|        <ul style="list-style:none;font-size:14px;color:var(--gray-600);line-height:2;">
+   261|   261|          <li>✅ Credit Card (Visa / MC / Amex)</li>
+   262|   262|          <li>✅ PayPal</li>
+   263|   263|          <li>✅ <strong>Afterpay</strong> — 4 interest-free payments</li>
+   264|   264|          <li>✅ <strong>Zip Pay</strong> — buy now, pay later</li>
+   265|   265|          <li>✅ All payments <strong>secure & encrypted</strong></li>
+   266|   266|        </ul>
+   267|   267|      </div>
+   268|   268|    </div>
+   269|   269|  </div>
+   270|   270|  <style>
+   271|   271|    .shipping-detail { display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px; }
+   272|   272|    .shipping-col h4 { font-size:16px;font-weight:700;color:var(--dark);margin-bottom:12px; }
+   273|   273|    @media (max-width:768px) { .shipping-detail { grid-template-columns:1fr;gap:24px; } }
+   274|   274|  </style>
+   275|   275|</section>
+   276|   276|
+   277|   277|<!-- NEWSLETTER -->
+   278|   278|<section class="newsletter">
+   279|   279|  <div class="container">
+   280|   280|    <h2>📬 Get Tradie Tips & Deals</h2>
+   281|   281|    <p>Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
+   282|   282|    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks for subscribing! 🎉');">
+   283|   283|      <input type="email" placeholder="Your email address" required />
+   284|   284|      <button type="submit">Subscribe →</button>
+   285|   285|    </form>
+   286|   286|  </div>
+   287|   287|</section>
+   288|   288|
+   289|   289|<!-- FOOTER -->
+   290|   290|<footer class="footer">
+   291|   291|  <div class="container">
+   292|   292|    <div class="footer-grid">
+   293|   293|      <div class="footer-brand">
+   294|   294|        <h3>💧 PrimeWash<span>Gear</span></h3>
+   295|   295|        <p>Australia's go-to for pressure washer parts, consumables, and tradie kits. Based in Notting Hill, Melbourne. Fast shipping across AU.</p>
+   296|   296|        <p style="margin-top:12px;font-size:13px;">📞 <a href="tel:+61406170544" style="color:var(--gray-400);">0406 170 544</a><br />📍 10 Elwood St, Notting Hill VIC 3168</p>
+   297|   297|        <div class="footer-social">
+   298|   298|          <a href="#" aria-label="TikTok">🎵</a>
+   299|   299|          <a href="#" aria-label="Instagram">📸</a>
+   300|   300|          <a href="#" aria-label="YouTube">▶️</a>
+   301|   301|          <a href="#" aria-label="Facebook">👍</a>
+   302|   302|        </div>
+   303|   303|      </div>
+   304|   304|      <div class="footer-col">
+   305|   305|        <h4>Shop</h4>
+   306|   306|        <ul>
+   307|   307|          <li><a href="shop.html">All Products</a></li>
+   308|   308|          <li><a href="shop.html#bundles">🎯 Bundles</a></li>
+   309|   309|          <li><a href="shop.html">Nozzles</a></li>
+   310|   310|          <li><a href="shop.html">Hoses</a></li>
+   311|   311|          <li><a href="shop.html">Maintenance Kits</a></li>
+   312|   312|        </ul>
+   313|   313|      </div>
+   314|   314|      <div class="footer-col">
+   315|   315|        <h4>Support</h4>
+   316|   316|        <ul>
+   317|   317|          <li><a href="contact.html">Contact Us</a></li>
+   318|   318|          <li><a href="#">Shipping Info</a></li>
+   319|   319|          <li><a href="#">Returns</a></li>
+   320|   320|          <li><a href="shipping.html">Shipping</a></li>
+   321|          <li><a href="returns.html">Returns</a></li>
+   322|          <li><a href="#">FAQ</a></li>
+   323|   321|          <li><a href="#">Track Order</a></li>
+   324|   322|        </ul>
+   325|   323|      </div>
+   326|   324|      <div class="footer-col">
+   327|   325|        <h4>Company</h4>
+   328|   326|        <ul>
+   329|   327|          <li><a href="about.html">About Us</a></li>
+   330|   328|          <li><a href="#">Blog</a></li>
+   331|   329|          <li><a href="#">Tradie Pro Program</a></li>
+   332|   330|          <li><a href="#">Privacy Policy</a></li>
+   333|   331|          <li><a href="#">Terms</a></li>
+   334|   332|        </ul>
+   335|   333|      </div>
+   336|   334|    </div>
+   337|   335|    <div class="footer-bottom">
+   338|   336|      <p>© 2026 PrimeWash Gear Australia. Built by a tradie, for tradies.</p>
+   339|   337|      <div class="footer-payment">
+   340|   338|        <span>💳</span>
+   341|   339|        <span>🏦</span>
+   342|   340|        <span>📱</span>
+   343|   341|      </div>
+   344|   342|    </div>
+   345|   343|  </div>
+   346|   344|</footer>
+   347|   345|
+   348|   346|<!-- TOAST CONTAINER -->
+   349|   347|<div class="toast-container" id="toastContainer"></div>
+   350|   348|
+   351|   349|<script src="js/main.js"></script>
+   352|   350|</body>
+   353|   351|</html>
+   354|   352|

@@ -1,180 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop — PrimeWash Gear Australia | Pressure Washer Parts & Tradie Kits</title>
-  <meta name="description" content="Shop premium pressure washer parts and tradie kits. Turbo nozzles, foam cannons, hoses, maintenance packs — shipped from Melbourne. 30-day guarantee." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
-</head>
-<body>
-
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement">
-  🇦🇺 Free shipping over $50 • Melbourne metro next day • 30-day guarantee &nbsp;<strong>—</strong>&nbsp; <a href="shop.html#bundles">Shop Bundles →</a>
-</div>
-
-<!-- NAVIGATION -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">💧</div>
-      PrimeWash<span>Gear</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html" class="active">Shop</a></li>
-      <li><a href="#bundles">Bundles</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="nav-cart" onclick="window.location.href='cart.html'" aria-label="Cart">
-        🛒 <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
-    </div>
-  </div>
-</nav>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="index.html">🏠 Home</a>
-  <a href="shop.html">🛍️ Shop</a>
-  <a href="#bundles">📦 Bundles</a>
-  <a href="about.html">ℹ️ About</a>
-  <a href="contact.html">📞 Contact</a>
-</div>
-
-<!-- PAGE HEADER -->
-<section class="page-header">
-  <div class="container">
-    <h1>🛍️ Shop PrimeWash Gear</h1>
-    <p>Premium pressure washer parts & tradie bundles — real gear for real work. Ships from Melbourne.</p>
-  </div>
-</section>
-
-<!-- ===== BUNDLES SECTION ===== -->
-<section class="bundles-section" id="bundles">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center;">🎯 Tradie Bundles — Save Up to 56%</h2>
-    <p class="section-subtitle" style="text-align:center;">Buying individual parts adds up. Our bundles are built by a tradie who knows what you actually need on the job.</p>
-    <div class="bundles-grid" id="bundlesGrid">
-      <!-- Injected by JS -->
-    </div>
-    <div style="text-align:center;margin-top:32px;padding:20px;background:var(--gray-50);border-radius:var(--radius);">
-      <p style="font-size:14px;color:var(--gray-600);">💡 <strong>Most tradies order the Pro Pack + Maintenance Pack together.</strong> That's everything you need for under $220 — delivered to your door.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== INDIVIDUAL PRODUCTS ===== -->
-<section class="page-main">
-  <div class="container">
-    <div class="products-header" style="margin-bottom:32px;">
-      <div>
-        <h2 class="section-title" style="font-size:24px;">🔧 Individual Parts</h2>
-        <p class="section-subtitle">Already have a pressure washer? Grab the parts you need separately.</p>
-      </div>
-    </div>
-    <div class="products-grid" id="productGrid">
-      <!-- Injected by JS -->
-    </div>
-    <div style="margin-top:48px;text-align:center;">
-      <a href="about.html" class="btn btn-outline">🇦🇺 Learn Our Story →</a>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST BAR -->
-<section class="trust-bar">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item"><span class="trust-icon">🇦🇺</span> Australian Owned</div>
-      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping Over $50</div>
-      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Dispatch</div>
-      <div class="trust-item"><span class="trust-icon">🔄</span> 30-Day Returns</div>
-      <div class="trust-item"><span class="trust-icon">💳</span> Afterpay + Zip Pay</div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="container">
-    <h2>📬 Get Tradie Tips & Deals</h2>
-    <p>Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
-    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks for subscribing! 🎉');">
-      <input type="email" placeholder="Your email address" required />
-      <button type="submit">Subscribe →</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>💧 PrimeWash<span>Gear</span></h3>
-        <p>Australia's go-to for pressure washer parts, consumables, and tradie kits. Based in Notting Hill, Melbourne. Fast shipping across AU.</p>
-        <p style="margin-top:12px;font-size:13px;">📞 <a href="tel:+61406170544" style="color:var(--gray-400);">0406 170 544</a><br />📍 10 Elwood St, Notting Hill VIC 3168</p>
-        <div class="footer-social">
-          <a href="#" aria-label="TikTok">🎵</a>
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="YouTube">▶️</a>
-          <a href="#" aria-label="Facebook">👍</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Products</a></li>
-          <li><a href="#bundles">🎯 Bundles</a></li>
-          <li><a href="shop.html">Nozzles</a></li>
-          <li><a href="shop.html">Hoses</a></li>
-          <li><a href="shop.html">Maintenance Kits</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Track Order</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Tradie Pro Program</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 PrimeWash Gear Australia. Built by a tradie, for tradies.</p>
-      <div class="footer-payment">
-        <span>💳</span>
-        <span>🏦</span>
-        <span>📱</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- TOAST CONTAINER -->
-<div class="toast-container" id="toastContainer"></div>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+     1|     1|<!DOCTYPE html>
+     2|     2|<html lang="en">
+     3|     3|<head>
+     4|     4|  <meta charset="UTF-8" />
+     5|     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     6|     6|  <title>Shop — PrimeWash Gear Australia | Pressure Washer Parts & Tradie Kits</title>
+     7|     7|  <meta name="description" content="Shop premium pressure washer parts and tradie kits. Turbo nozzles, foam cannons, hoses, maintenance packs — shipped from Melbourne. 30-day guarantee." />
+     8|     8|  <link rel="preconnect" href="https://fonts.googleapis.com" />
+     9|     9|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    10|    10|  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    11|    11|  <link rel="stylesheet" href="css/style.css" />
+    12|    12|  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
+    13|    13|</head>
+    14|    14|<body>
+    15|    15|
+    16|    16|<!-- ANNOUNCEMENT BAR -->
+    17|    17|<div class="announcement">
+    18|    18|  🇦🇺 Free shipping over $50 • Melbourne metro next day • 30-day guarantee &nbsp;<strong>—</strong>&nbsp; <a href="shop.html#bundles">Shop Bundles →</a>
+    19|    19|</div>
+    20|    20|
+    21|    21|<!-- NAVIGATION -->
+    22|    22|<nav class="nav">
+    23|    23|  <div class="nav-inner">
+    24|    24|    <a href="index.html" class="nav-logo">
+    25|    25|      <div class="nav-logo-icon">💧</div>
+    26|    26|      PrimeWash<span>Gear</span>
+    27|    27|    </a>
+    28|    28|    <ul class="nav-links">
+    29|    29|      <li><a href="index.html">Home</a></li>
+    30|    30|      <li><a href="shop.html" class="active">Shop</a></li>
+    31|    31|      <li><a href="#bundles">Bundles</a></li>
+    32|    32|      <li><a href="about.html">About</a></li>
+    33|    33|      <li><a href="contact.html">Contact</a></li>
+    34|    34|    </ul>
+    35|    35|    <div class="nav-actions">
+    36|    36|      <button class="nav-cart" onclick="window.location.href='cart.html'" aria-label="Cart">
+    37|    37|        🛒 <span class="cart-count" id="cartCount">0</span>
+    38|    38|      </button>
+    39|    39|      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+    40|    40|    </div>
+    41|    41|  </div>
+    42|    42|</nav>
+    43|    43|
+    44|    44|<!-- MOBILE NAV -->
+    45|    45|<div class="mobile-nav" id="mobileNav">
+    46|    46|  <a href="index.html">🏠 Home</a>
+    47|    47|  <a href="shop.html">🛍️ Shop</a>
+    48|    48|  <a href="#bundles">📦 Bundles</a>
+    49|    49|  <a href="about.html">ℹ️ About</a>
+    50|    50|  <a href="contact.html">📞 Contact</a>
+    51|    51|</div>
+    52|    52|
+    53|    53|<!-- PAGE HEADER -->
+    54|    54|<section class="page-header">
+    55|    55|  <div class="container">
+    56|    56|    <h1>🛍️ Shop PrimeWash Gear</h1>
+    57|    57|    <p>Premium pressure washer parts & tradie bundles — real gear for real work. Ships from Melbourne.</p>
+    58|    58|  </div>
+    59|    59|</section>
+    60|    60|
+    61|    61|<!-- ===== BUNDLES SECTION ===== -->
+    62|    62|<section class="bundles-section" id="bundles">
+    63|    63|  <div class="container">
+    64|    64|    <h2 class="section-title" style="text-align:center;">🎯 Tradie Bundles — Save Up to 56%</h2>
+    65|    65|    <p class="section-subtitle" style="text-align:center;">Buying individual parts adds up. Our bundles are built by a tradie who knows what you actually need on the job.</p>
+    66|    66|    <div class="bundles-grid" id="bundlesGrid">
+    67|    67|      <!-- Injected by JS -->
+    68|    68|    </div>
+    69|    69|    <div style="text-align:center;margin-top:32px;padding:20px;background:var(--gray-50);border-radius:var(--radius);">
+    70|    70|      <p style="font-size:14px;color:var(--gray-600);">💡 <strong>Most tradies order the Pro Pack + Maintenance Pack together.</strong> That's everything you need for under $220 — delivered to your door.</p>
+    71|    71|    </div>
+    72|    72|  </div>
+    73|    73|</section>
+    74|    74|
+    75|    75|<!-- ===== INDIVIDUAL PRODUCTS ===== -->
+    76|    76|<section class="page-main">
+    77|    77|  <div class="container">
+    78|    78|    <div class="products-header" style="margin-bottom:32px;">
+    79|    79|      <div>
+    80|    80|        <h2 class="section-title" style="font-size:24px;">🔧 Individual Parts</h2>
+    81|    81|        <p class="section-subtitle">Already have a pressure washer? Grab the parts you need separately.</p>
+    82|    82|      </div>
+    83|    83|    </div>
+    84|    84|    <div class="products-grid" id="productGrid">
+    85|    85|      <!-- Injected by JS -->
+    86|    86|    </div>
+    87|    87|    <div style="margin-top:48px;text-align:center;">
+    88|    88|      <a href="about.html" class="btn btn-outline">🇦🇺 Learn Our Story →</a>
+    89|    89|    </div>
+    90|    90|  </div>
+    91|    91|</section>
+    92|    92|
+    93|    93|<!-- TRUST BAR -->
+    94|    94|<section class="trust-bar">
+    95|    95|  <div class="container">
+    96|    96|    <div class="trust-grid">
+    97|    97|      <div class="trust-item"><span class="trust-icon">🇦🇺</span> Australian Owned</div>
+    98|    98|      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping Over $50</div>
+    99|    99|      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Dispatch</div>
+   100|   100|      <div class="trust-item"><span class="trust-icon">🔄</span> 30-Day Returns</div>
+   101|   101|      <div class="trust-item"><span class="trust-icon">💳</span> PayPal + Afterpay</div>
+   102|   102|    </div>
+   103|   103|  </div>
+   104|   104|</section>
+   105|   105|
+   106|   106|<!-- NEWSLETTER -->
+   107|   107|<section class="newsletter">
+   108|   108|  <div class="container">
+   109|   109|    <h2>📬 Get Tradie Tips & Deals</h2>
+   110|   110|    <p>Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
+   111|   111|    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks for subscribing! 🎉');">
+   112|   112|      <input type="email" placeholder="Your email address" required />
+   113|   113|      <button type="submit">Subscribe →</button>
+   114|   114|    </form>
+   115|   115|  </div>
+   116|   116|</section>
+   117|   117|
+   118|   118|<!-- FOOTER -->
+   119|   119|<footer class="footer">
+   120|   120|  <div class="container">
+   121|   121|    <div class="footer-grid">
+   122|   122|      <div class="footer-brand">
+   123|   123|        <h3>💧 PrimeWash<span>Gear</span></h3>
+   124|   124|        <p>Australia's go-to for pressure washer parts, consumables, and tradie kits. Based in Notting Hill, Melbourne. Fast shipping across AU.</p>
+   125|   125|        <p style="margin-top:12px;font-size:13px;">📞 <a href="tel:+61406170544" style="color:var(--gray-400);">0406 170 544</a><br />📍 10 Elwood St, Notting Hill VIC 3168</p>
+   126|   126|        <div class="footer-social">
+   127|   127|          <a href="#" aria-label="TikTok">🎵</a>
+   128|   128|          <a href="#" aria-label="Instagram">📸</a>
+   129|   129|          <a href="#" aria-label="YouTube">▶️</a>
+   130|   130|          <a href="#" aria-label="Facebook">👍</a>
+   131|   131|        </div>
+   132|   132|      </div>
+   133|   133|      <div class="footer-col">
+   134|   134|        <h4>Shop</h4>
+   135|   135|        <ul>
+   136|   136|          <li><a href="shop.html">All Products</a></li>
+   137|   137|          <li><a href="#bundles">🎯 Bundles</a></li>
+   138|   138|          <li><a href="shop.html">Nozzles</a></li>
+   139|   139|          <li><a href="shop.html">Hoses</a></li>
+   140|   140|          <li><a href="shop.html">Maintenance Kits</a></li>
+   141|   141|        </ul>
+   142|   142|      </div>
+   143|   143|      <div class="footer-col">
+   144|   144|        <h4>Support</h4>
+   145|   145|        <ul>
+   146|   146|          <li><a href="contact.html">Contact Us</a></li>
+   147|   147|          <li><a href="#">Shipping Info</a></li>
+   148|   148|          <li><a href="#">Returns</a></li>
+   149|   149|          <li><a href="shipping.html">Shipping</a></li>
+   150|          <li><a href="returns.html">Returns</a></li>
+   151|          <li><a href="#">FAQ</a></li>
+   152|   150|          <li><a href="#">Track Order</a></li>
+   153|   151|        </ul>
+   154|   152|      </div>
+   155|   153|      <div class="footer-col">
+   156|   154|        <h4>Company</h4>
+   157|   155|        <ul>
+   158|   156|          <li><a href="about.html">About Us</a></li>
+   159|   157|          <li><a href="#">Blog</a></li>
+   160|   158|          <li><a href="#">Tradie Pro Program</a></li>
+   161|   159|          <li><a href="#">Privacy Policy</a></li>
+   162|   160|          <li><a href="#">Terms</a></li>
+   163|   161|        </ul>
+   164|   162|      </div>
+   165|   163|    </div>
+   166|   164|    <div class="footer-bottom">
+   167|   165|      <p>© 2026 PrimeWash Gear Australia. Built by a tradie, for tradies.</p>
+   168|   166|      <div class="footer-payment">
+   169|   167|        <span>💳</span>
+   170|   168|        <span>🏦</span>
+   171|   169|        <span>📱</span>
+   172|   170|      </div>
+   173|   171|    </div>
+   174|   172|  </div>
+   175|   173|</footer>
+   176|   174|
+   177|   175|<!-- TOAST CONTAINER -->
+   178|   176|<div class="toast-container" id="toastContainer"></div>
+   179|   177|
+   180|   178|<script src="js/main.js"></script>
+   181|   179|</body>
+   182|   180|</html>
+   183|   181|
