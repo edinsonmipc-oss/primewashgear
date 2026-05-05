@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edinsonmipc-oss.github.io/primewashgear/sitemap.xml
