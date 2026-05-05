@@ -1,522 +1,775 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PrimeWash Gear Australia — Pressure Washer Parts for Tradies</title>
-  <meta name="description" content="Australia's tradie-owned pressure washer parts store. Turbo nozzles, foam cannons, hoses & kits. Same-day dispatch from Melbourne. 30-day guarantee." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "PrimeWash Gear Australia",
-    "description": "Pressure washing gear for Aussie tradies. Reliable parts, fair prices.",
-    "url": "https://edinsonmipc-oss.github.io/primewashgear/",
-    "telephone": "+61406170544",
-    "email": "antoniolandscapingman@gmail.com",
-    "address": {"@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU"},
-    "priceRange": "$15-$175"
-  }
-  </script>
-  <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#060b1a;--dark:#0b1120;--card:#0f172a;--orange:#f97316;--orange-dark:#dc2626;--gray-300:#94a3b8;--gray-400:#64748b;--gray-600:#475569}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--navy);color:#fff;line-height:1.5}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-
-/* ANNOUNCEMENT */
-.announce{background:var(--orange);color:#fff;text-align:center;padding:8px 16px;font-size:13px;font-weight:600;letter-spacing:0.3px}
-.announce a{color:#fff;text-decoration:underline;font-weight:700}
-
-/* NAV */
-.nav{background:rgba(6,11,26,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:100}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:64px;max-width:1200px;margin:0 auto}
-.nav-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px;color:#fff}
-.nav-logo span{color:var(--orange)}
-.nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.6);font-size:14px;font-weight:500;transition:color 0.2s}
-.nav-links a:hover,.nav-links a.active{color:#fff}
-.nav-actions{display:flex;align-items:center;gap:12px}
-.nav-cart{background:none;border:none;color:#fff;font-size:18px;cursor:pointer;position:relative}
-.cart-count{background:var(--orange);color:#fff;font-size:11px;font-weight:700;padding:1px 6px;border-radius:10px;position:absolute;top:-6px;right:-10px}
-.mobile-btn{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
-
-/* HERO */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 25%;filter:brightness(0.2) saturate(1.1);transform:scale(1.08)}
-.hero-shadow{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,11,26,0.95) 0%,rgba(6,11,26,0.6) 50%,rgba(249,115,22,0.12) 100%)}
-.hero-content{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:40px 20px;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.25);color:var(--orange);font-size:12px;font-weight:600;padding:7px 18px;border-radius:100px;margin-bottom:24px;letter-spacing:0.3px}
-.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;line-height:1.08;margin-bottom:8px}
-.hero h1 span{background:linear-gradient(135deg,#fb923c,#f97316,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-tagline{font-size:1.3rem;font-weight:700;color:var(--orange);margin-bottom:6px}
-.hero-desc{font-size:1.1rem;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto 28px;line-height:1.6}
-.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border-radius:12px;transition:all 0.3s;box-shadow:0 8px 32px rgba(249,115,22,0.35)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(249,115,22,0.5)}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:1.05rem;padding:16px 34px;border-radius:12px;border:2px solid rgba(255,255,255,0.15);transition:all 0.3s}
-.btn-outline:hover{border-color:var(--orange);background:rgba(249,115,22,0.08)}
-.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:48px;flex-wrap:wrap}
-.hero-stat{text-align:center}
-.hero-stat-val{display:block;font-size:1.5rem;font-weight:800;color:var(--orange)}
-.hero-stat-lbl{display:block;font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:4px}
-
-/* TRUST BAR */
-.trust{background:linear-gradient(135deg,#0f172a,#1e293b);padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
-.trust-grid{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.65);font-size:13px;font-weight:600}
-.trust-item span{font-size:16px}
-
-/* SECTION HEADER */
-.section{padding:70px 0}
-.section-dark{background:var(--dark)}
-.section-header{text-align:center;margin-bottom:44px}
-.section-tag{display:inline-block;background:rgba(249,115,22,0.1);color:var(--orange);font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:2px;margin-bottom:14px}
-.section h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;margin-bottom:10px}
-.section h2 span{background:linear-gradient(135deg,#fb923c,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.section-sub{color:rgba(255,255,255,0.45);font-size:15px;max-width:580px;margin:0 auto;line-height:1.6}
-
-/* BUNDLES */
-.bundles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.bundle-card{background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:16px;overflow:hidden;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.1);position:relative}
-.bundle-card:hover{transform:translateY(-6px);border-color:rgba(249,115,22,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
-.bundle-card.featured{border-color:rgba(249,115,22,0.25);box-shadow:0 0 30px rgba(249,115,22,0.08);transform:scale(1.02)}
-.bundle-card.featured:hover{transform:scale(1.02) translateY(-6px)}
-.bundle-badge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;z-index:3;box-shadow:0 4px 16px rgba(249,115,22,0.4)}
-.bundle-img{width:100%;height:200px;object-fit:cover;display:block;background:var(--card)}
-.bundle-body{padding:20px}
-.bundle-name{font-size:1.15rem;font-weight:800;margin-bottom:3px}
-.bundle-sub{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:10px}
-.bundle-price{font-size:1.6rem;font-weight:900;color:var(--orange)}
-.bundle-was{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:line-through;margin-left:6px}
-.bundle-list{margin:14px 0;padding:0;list-style:none}
-.bundle-list li{font-size:12px;color:rgba(255,255,255,0.55);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
-.btn-buy{display:block;background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;font-weight:800;font-size:0.95rem;padding:13px;border-radius:10px;text-align:center;transition:all 0.3s;box-shadow:0 4px 16px rgba(249,115,22,0.25)}
-.btn-buy:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(249,115,22,0.4)}
-.pay-badges{font-size:10px;color:rgba(255,255,255,0.3);text-align:center;margin-top:10px}
-.bundle-ps{text-align:center;margin-top:32px;font-size:13px;color:rgba(255,255,255,0.35);max-width:550px;margin-left:auto;margin-right:auto}
-.bundle-ps strong{color:var(--orange)}
-
-/* RESULTS */
-.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.result-card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.05)}
-.result-imgs{display:grid;grid-template-columns:1fr 1fr}
-.result-box{padding:32px 20px;text-align:center;min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.result-label{font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:4px;margin-bottom:8px}
-.result-label.before{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5)}
-.result-label.after{background:rgba(22,163,74,0.2);color:#4ade80}
-.result-icon{font-size:2.2rem;margin-bottom:6px}
-.result-desc{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.4}
-.result-quote{padding:20px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;font-style:italic}
-.result-quote strong{color:var(--orange);font-style:normal;display:block;margin-top:6px;font-size:12px}
-
-/* PRODUCTS GRID */
-.prod-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px}
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.prod-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;overflow:hidden;transition:all 0.3s}
-.prod-card:hover{transform:translateY(-4px);border-color:rgba(249,115,22,0.15)}
-.prod-card img{width:100%;height:160px;object-fit:cover;background:var(--card)}
-.prod-info{padding:14px}
-.prod-brand{font-size:10px;font-weight:700;color:rgba(255,255,255,0.3);letter-spacing:1px;margin-bottom:4px}
-.prod-name{font-size:13px;font-weight:600;color:#fff;line-height:1.3;margin-bottom:4px}
-.prod-rating{font-size:12px;color:#fbbf24;margin-bottom:4px}
-.prod-rating span{color:rgba(255,255,255,0.35);font-size:11px}
-.prod-price{font-size:16px;font-weight:800;color:var(--orange)}
-.prod-old{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:line-through;margin-left:6px}
-.prod-badge{position:absolute;top:8px;left:8px;background:var(--orange);color:#fff;font-size:9px;font-weight:700;padding:3px 10px;border-radius:100px}
-
-/* BENEFITS */
-.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.benefit-card{text-align:center;padding:28px 16px}
-.benefit-icon{font-size:2rem;margin-bottom:12px}
-.benefit-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
-.benefit-card p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
-
-/* REVIEWS */
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:24px}
-.review-stars{color:#fbbf24;font-size:15px;margin-bottom:10px}
-.review-text{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:14px;font-style:italic}
-.review-auth{display:flex;align-items:center;gap:10px}
-.review-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
-.review-name{font-size:13px;font-weight:600}
-.review-role{font-size:11px;color:rgba(255,255,255,0.35)}
-
-/* FOOTER */
-.footer{background:#050a17;border-top:1px solid rgba(255,255,255,0.04);padding:50px 0 30px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
-.footer-brand h3{font-size:18px;font-weight:800;margin-bottom:10px}
-.footer-brand h3 span{color:var(--orange)}
-.footer-brand p{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6;max-width:320px}
-.footer-info{margin-top:12px;font-size:12px;color:rgba(255,255,255,0.35);line-height:1.8}
-.footer-info a{color:rgba(255,255,255,0.35)}
-.footer-info a:hover{color:var(--orange)}
-.footer-social{display:flex;gap:12px;margin-top:14px}
-.footer-social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-size:14px;transition:all 0.2s}
-.footer-social a:hover{background:rgba(249,115,22,0.15)}
-.footer-col h4{font-size:13px;font-weight:700;margin-bottom:14px;color:rgba(255,255,255,0.5);letter-spacing:1px}
-.footer-col ul{list-style:none}
-.footer-col li{margin-bottom:8px}
-.footer-col a{font-size:13px;color:rgba(255,255,255,0.4);transition:color 0.2s}
-.footer-col a:hover{color:var(--orange)}
-.footer-bot{border-top:1px solid rgba(255,255,255,0.04);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bot p{font-size:12px;color:rgba(255,255,255,0.25)}
-.footer-pay{display:flex;gap:8px}
-.footer-pay span{font-size:16px}
-
-@media(max-width:1024px){
-  .bundles-grid{grid-template-columns:1fr 1fr}
-  .prod-grid{grid-template-columns:repeat(2,1fr)}
-  .benefits-grid{grid-template-columns:repeat(2,1fr)}
-  .bundle-card.featured{transform:none}
-  .bundle-card.featured:hover{transform:translateY(-6px)}
-}
-@media(max-width:768px){
-  .nav-links{display:none}
-  .mobile-btn{display:block}
-  .hero-stats{gap:20px}
-  .hero-stat-val{font-size:1.1rem}
-  .bundles-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}
-  .results-grid{grid-template-columns:1fr}
-  .prod-grid{grid-template-columns:1fr 1fr}
-  .benefits-grid{grid-template-columns:1fr 1fr}
-  .reviews-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:30px}
-  .btn-primary,.btn-outline{display:block;text-align:center}
-}
-  </style>
+     1|<!DOCTYPE html>
+     2|<html lang="en-AU">
+     3|<head>
+     4|<meta charset="UTF-8">
+     5|<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|<title>PrimeWash Gear Australia – Pressure Washing Parts &amp; Bundles for Tradies</title>
+     7|<meta name="description" content="PrimeWash Gear Australia — premium pressure washer parts, foam cannons, turbo nozzles and value bundles. Melbourne owned. Fast shipping across AU.">
+     8|<link rel="preconnect" href="https://fonts.googleapis.com">
+     9|<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    10|<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    11|<style>
+    12|  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    13|  html { scroll-behavior: smooth; }
+    14|  body {
+    15|    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    16|    background: #ffffff;
+    17|    color: #111111;
+    18|    line-height: 1.6;
+    19|    -webkit-font-smoothing: antialiased;
+    20|  }
+    21|  a { text-decoration: none; color: inherit; }
+    22|  img { max-width: 100%; height: auto; display: block; }
+    23|
+    24|  /* ─── Navigation ─── */
+    25|  .nav {
+    26|    position: sticky; top: 0; z-index: 100;
+    27|    background: rgba(255,255,255,0.97);
+    28|    backdrop-filter: blur(12px);
+    29|    -webkit-backdrop-filter: blur(12px);
+    30|    border-bottom: 1px solid #f0f0f0;
+    31|    padding: 0 24px;
+    32|  }
+    33|  .nav-inner {
+    34|    max-width: 1200px; margin: 0 auto;
+    35|    display: flex; align-items: center; justify-content: space-between;
+    36|    height: 68px;
+    37|  }
+    38|  .nav-logo {
+    39|    display: flex; align-items: center; gap: 10px;
+    40|    font-weight: 800; font-size: 1.35rem; color: #111;
+    41|  }
+    42|  .nav-logo-icon {
+    43|    width: 36px; height: 36px;
+    44|    background: #f97316; border-radius: 8px;
+    45|    display: flex; align-items: center; justify-content: center;
+    46|    color: #fff; font-size: 1.1rem; font-weight: 800;
+    47|  }
+    48|  .nav-logo span { color: #f97316; }
+    49|  .nav-links { display: flex; gap: 32px; align-items: center; }
+    50|  .nav-links a {
+    51|    font-size: 0.875rem; font-weight: 500; color: #555;
+    52|    transition: color 0.2s;
+    53|  }
+    54|  .nav-links a:hover { color: #f97316; }
+    55|  .nav-cart {
+    56|    display: flex; align-items: center; gap: 8px;
+    57|    background: #111; color: #fff;
+    58|    padding: 8px 18px; border-radius: 100px;
+    59|    font-size: 0.85rem; font-weight: 600;
+    60|    transition: background 0.2s;
+    61|  }
+    62|  .nav-cart:hover { background: #f97316; }
+    63|  .nav-cart svg { width: 18px; height: 18px; fill: currentColor; }
+    64|  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    65|  .nav-hamburger span { width: 24px; height: 2.5px; background: #111; border-radius: 2px; }
+    66|
+    67|  /* ─── Hero ─── */
+    68|  .hero {
+    69|    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    70|    padding: 80px 24px 100px;
+    71|    position: relative; overflow: hidden;
+    72|  }
+    73|  .hero::before {
+    74|    content: '';
+    75|    position: absolute; top: -40%; right: -20%; width: 600px; height: 600px;
+    76|    background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+    77|    border-radius: 50%;
+    78|  }
+    79|  .hero::after {
+    80|    content: '';
+    81|    position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px;
+    82|    background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+    83|    border-radius: 50%;
+    84|  }
+    85|  .hero-inner {
+    86|    max-width: 900px; margin: 0 auto; text-align: center;
+    87|    position: relative; z-index: 1;
+    88|  }
+    89|  .hero-badge {
+    90|    display: inline-block;
+    91|    background: rgba(249,115,22,0.15);
+    92|    color: #fb923c;
+    93|    font-size: 0.8rem; font-weight: 600;
+    94|    padding: 6px 16px; border-radius: 100px;
+    95|    margin-bottom: 24px;
+    96|    letter-spacing: 0.3px;
+    97|  }
+    98|  .hero h1 {
+    99|    font-size: clamp(2.2rem, 5vw, 3.6rem);
+   100|    font-weight: 800;
+   101|    color: #ffffff;
+   102|    line-height: 1.15;
+   103|    margin-bottom: 20px;
+   104|  }
+   105|  .hero h1 span { color: #f97316; }
+   106|  .hero p {
+   107|    font-size: clamp(1rem, 2vw, 1.2rem);
+   108|    color: #94a3b8;
+   109|    max-width: 640px; margin: 0 auto 36px;
+   110|    line-height: 1.7;
+   111|  }
+   112|  .hero-cta {
+   113|    display: flex; gap: 16px; justify-content: center;
+   114|    flex-wrap: wrap;
+   115|  }
+   116|  .btn-primary {
+   117|    display: inline-flex; align-items: center; gap: 8px;
+   118|    background: #f97316; color: #fff;
+   119|    padding: 14px 34px; border-radius: 100px;
+   120|    font-weight: 600; font-size: 1rem;
+   121|    transition: all 0.25s;
+   122|    border: 2px solid #f97316;
+   123|  }
+   124|  .btn-primary:hover {
+   125|    background: #ea580c; border-color: #ea580c;
+   126|    transform: translateY(-2px);
+   127|    box-shadow: 0 10px 30px -10px rgba(249,115,22,0.4);
+   128|  }
+   129|  .btn-secondary {
+   130|    display: inline-flex; align-items: center; gap: 8px;
+   131|    background: transparent; color: #fff;
+   132|    padding: 14px 34px; border-radius: 100px;
+   133|    font-weight: 600; font-size: 1rem;
+   134|    border: 2px solid rgba(255,255,255,0.2);
+   135|    transition: all 0.25s;
+   136|  }
+   137|  .btn-secondary:hover {
+   138|    border-color: #f97316; color: #f97316;
+   139|    transform: translateY(-2px);
+   140|  }
+   141|
+   142|  /* ─── Section spacing ─── */
+   143|  section { padding: 80px 24px; }
+   144|  .section-inner { max-width: 1200px; margin: 0 auto; }
+   145|  .section-label {
+   146|    text-align: center;
+   147|    font-size: 0.8rem; font-weight: 600; color: #f97316; text-transform: uppercase;
+   148|    letter-spacing: 2px; margin-bottom: 8px;
+   149|  }
+   150|  .section-title {
+   151|    text-align: center;
+   152|    font-size: clamp(1.6rem, 3vw, 2.2rem);
+   153|    font-weight: 800; color: #111;
+   154|    margin-bottom: 12px;
+   155|  }
+   156|  .section-sub {
+   157|    text-align: center;
+   158|    font-size: 1rem; color: #666;
+   159|    max-width: 540px; margin: 0 auto 48px;
+   160|  }
+   161|
+   162|  /* ─── Bundles ─── */
+   163|  .bundles-grid {
+   164|    display: grid;
+   165|    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   166|    gap: 28px;
+   167|  }
+   168|  .bundle-card {
+   169|    background: #ffffff;
+   170|    border-radius: 16px;
+   171|    overflow: hidden;
+   172|    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+   173|    border: 1px solid #f0f0f0;
+   174|    transition: all 0.3s;
+   175|    display: flex; flex-direction: column;
+   176|  }
+   177|  .bundle-card:hover {
+   178|    transform: translateY(-5px);
+   179|    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+   180|    border-color: #f97316;
+   181|  }
+   182|  .bundle-card-img {
+   183|    width: 100%; height: 220px;
+   184|    object-fit: cover;
+   185|    background: #f8f8f8;
+   186|  }
+   187|  .bundle-card-body {
+   188|    padding: 28px;
+   189|    flex: 1;
+   190|    display: flex; flex-direction: column;
+   191|  }
+   192|  .bundle-card-body h3 {
+   193|    font-size: 1.2rem; font-weight: 700; color: #111;
+   194|    margin-bottom: 4px;
+   195|  }
+   196|  .bundle-card-body .bundle-badge {
+   197|    display: inline-block;
+   198|    background: #fef3c7; color: #92400e;
+   199|    font-size: 0.72rem; font-weight: 600;
+   200|    padding: 3px 10px; border-radius: 100px;
+   201|    margin-bottom: 10px;
+   202|    align-self: flex-start;
+   203|  }
+   204|  .bundle-card-body .bundle-desc {
+   205|    font-size: 0.9rem; color: #555;
+   206|    line-height: 1.7; margin-bottom: 16px;
+   207|    flex: 1;
+   208|  }
+   209|  .bundle-card-body .bundle-features {
+   210|    list-style: none; margin-bottom: 20px;
+   211|  }
+   212|  .bundle-card-body .bundle-features li {
+   213|    font-size: 0.85rem; color: #444;
+   214|    padding: 4px 0; display: flex; align-items: center; gap: 8px;
+   215|  }
+   216|  .bundle-card-body .bundle-features li::before {
+   217|    content: '✓';
+   218|    color: #f97316; font-weight: 700;
+   219|  }
+   220|  .bundle-price-row {
+   221|    display: flex; align-items: center; justify-content: space-between;
+   222|    margin-top: auto; padding-top: 16px; border-top: 1px solid #f0f0f0;
+   223|  }
+   224|  .bundle-price {
+   225|    font-size: 1.5rem; font-weight: 800; color: #111;
+   226|  }
+   227|  .bundle-price .old-price {
+   228|    font-size: 0.95rem; font-weight: 400; color: #999;
+   229|    text-decoration: line-through; margin-left: 8px;
+   230|  }
+   231|  .bundle-btn {
+   232|    background: #f97316; color: #fff;
+   233|    padding: 10px 22px; border-radius: 100px;
+   234|    font-weight: 600; font-size: 0.85rem;
+   235|    transition: background 0.2s;
+   236|    white-space: nowrap;
+   237|  }
+   238|  .bundle-btn:hover { background: #ea580c; }
+   239|
+   240|  /* ─── Products Grid ─── */
+   241|  .products-grid {
+   242|    display: grid;
+   243|    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   244|    gap: 24px;
+   245|  }
+   246|  .product-card {
+   247|    background: #ffffff;
+   248|    border-radius: 14px;
+   249|    overflow: hidden;
+   250|    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+   251|    border: 1px solid #f0f0f0;
+   252|    transition: all 0.3s;
+   253|  }
+   254|  .product-card:hover {
+   255|    transform: translateY(-4px);
+   256|    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+   257|    border-color: #f97316;
+   258|  }
+   259|  .product-card-img-wrap {
+   260|    width: 100%; height: 200px;
+   261|    overflow: hidden; background: #fafafa;
+   262|    display: flex; align-items: center; justify-content: center;
+   263|    padding: 20px;
+   264|  }
+   265|  .product-card-img-wrap img {
+   266|    width: 100%; height: 100%;
+   267|    object-fit: contain;
+   268|    transition: transform 0.4s;
+   269|  }
+   270|  .product-card:hover .product-card-img-wrap img {
+   271|    transform: scale(1.05);
+   272|  }
+   273|  .product-card-body {
+   274|    padding: 20px;
+   275|  }
+   276|  .product-card-body h4 {
+   277|    font-size: 1rem; font-weight: 600; color: #111;
+   278|    margin-bottom: 4px;
+   279|  }
+   280|  .product-card-body .product-desc {
+   281|    font-size: 0.82rem; color: #777;
+   282|    margin-bottom: 12px;
+   283|  }
+   284|  .product-rating {
+   285|    display: flex; align-items: center; gap: 6px;
+   286|    margin-bottom: 10px;
+   287|  }
+   288|  .product-rating .stars {
+   289|    color: #f59e0b; font-size: 0.85rem;
+   290|    letter-spacing: 1px;
+   291|  }
+   292|  .product-rating .count {
+   293|    font-size: 0.78rem; color: #999;
+   294|  }
+   295|  .product-card-body .price-row {
+   296|    display: flex; align-items: center; justify-content: space-between;
+   297|  }
+   298|  .product-card-body .price {
+   299|    font-size: 1.2rem; font-weight: 700; color: #111;
+   300|  }
+   301|  .product-card-body .buy-btn {
+   302|    background: #111; color: #fff;
+   303|    padding: 8px 18px; border-radius: 100px;
+   304|    font-size: 0.8rem; font-weight: 600;
+   305|    transition: background 0.2s;
+   306|  }
+   307|  .product-card-body .buy-btn:hover { background: #f97316; }
+   308|
+   309|  /* ─── Trust Row ─── */
+   310|  .trust-row {
+   311|    background: #f8f8f8;
+   312|    padding: 48px 24px;
+   313|    border-top: 1px solid #eee;
+   314|    border-bottom: 1px solid #eee;
+   315|  }
+   316|  .trust-grid {
+   317|    max-width: 1000px; margin: 0 auto;
+   318|    display: grid;
+   319|    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   320|    gap: 32px;
+   321|  }
+   322|  .trust-item {
+   323|    text-align: center;
+   324|  }
+   325|  .trust-item .trust-icon {
+   326|    width: 48px; height: 48px;
+   327|    margin: 0 auto 12px;
+   328|    background: #fff;
+   329|    border-radius: 12px;
+   330|    display: flex; align-items: center; justify-content: center;
+   331|    font-size: 1.4rem;
+   332|    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+   333|  }
+   334|  .trust-item h4 {
+   335|    font-size: 0.95rem; font-weight: 700; color: #111; margin-bottom: 4px;
+   336|  }
+   337|  .trust-item p {
+   338|    font-size: 0.82rem; color: #666;
+   339|  }
+   340|
+   341|  /* ─── Testimonials ─── */
+   342|  .testimonials-grid {
+   343|    display: grid;
+   344|    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   345|    gap: 28px;
+   346|  }
+   347|  .testimonial-card {
+   348|    background: #ffffff;
+   349|    border-radius: 14px;
+   350|    padding: 28px;
+   351|    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+   352|    border: 1px solid #f0f0f0;
+   353|  }
+   354|  .testimonial-card .stars {
+   355|    color: #f59e0b; font-size: 1rem;
+   356|    margin-bottom: 12px; letter-spacing: 2px;
+   357|  }
+   358|  .testimonial-card blockquote {
+   359|    font-size: 0.92rem; color: #444;
+   360|    line-height: 1.7; font-style: italic;
+   361|    margin-bottom: 16px;
+   362|  }
+   363|  .testimonial-card .author {
+   364|    display: flex; align-items: center; gap: 12px;
+   365|  }
+   366|  .testimonial-card .author-avatar {
+   367|    width: 40px; height: 40px;
+   368|    border-radius: 50%;
+   369|    background: #f97316;
+   370|    display: flex; align-items: center; justify-content: center;
+   371|    color: #fff; font-weight: 700; font-size: 0.9rem;
+   372|  }
+   373|  .testimonial-card .author-info strong {
+   374|    display: block; font-size: 0.88rem; color: #111;
+   375|  }
+   376|  .testimonial-card .author-info span {
+   377|    font-size: 0.78rem; color: #888;
+   378|  }
+   379|
+   380|  /* ─── Footer ─── */
+   381|  footer {
+   382|    background: #0f172a;
+   383|    color: #94a3b8;
+   384|    padding: 48px 24px 32px;
+   385|  }
+   386|  .footer-inner {
+   387|    max-width: 1200px; margin: 0 auto;
+   388|    display: grid;
+   389|    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+   390|    gap: 40px;
+   391|    margin-bottom: 32px;
+   392|  }
+   393|  .footer-col h4 {
+   394|    color: #ffffff; font-size: 1rem; font-weight: 700;
+   395|    margin-bottom: 16px;
+   396|  }
+   397|  .footer-col p, .footer-col a {
+   398|    font-size: 0.88rem; line-height: 1.8;
+   399|    display: block;
+   400|  }
+   401|  .footer-col a:hover { color: #f97316; }
+   402|  .footer-brand {
+   403|    font-weight: 800; font-size: 1.1rem; color: #fff;
+   404|    margin-bottom: 8px;
+   405|  }
+   406|  .footer-brand span { color: #f97316; }
+   407|  .footer-bottom {
+   408|    max-width: 1200px; margin: 0 auto;
+   409|    padding-top: 24px;
+   410|    border-top: 1px solid rgba(255,255,255,0.08);
+   411|    display: flex; justify-content: space-between; align-items: center;
+   412|    flex-wrap: wrap; gap: 12px;
+   413|    font-size: 0.82rem;
+   414|  }
+   415|  .footer-bottom .payment-icons {
+   416|    display: flex; gap: 10px; align-items: center;
+   417|  }
+   418|  .footer-bottom .payment-icons span {
+   419|    background: rgba(255,255,255,0.08);
+   420|    padding: 4px 10px; border-radius: 4px;
+   421|    font-size: 0.72rem; font-weight: 600; color: #ccc;
+   422|  }
+   423|
+   424|  /* ─── Mobile ─── */
+   425|  @media (max-width: 768px) {
+   426|    .nav-links { display: none; }
+   427|    .nav-hamburger { display: flex; }
+   428|    .nav-cart { padding: 8px 14px; font-size: 0.8rem; }
+   429|    .nav-cart span { display: none; }
+   430|    .hero { padding: 60px 20px 70px; }
+   431|    .hero-cta { flex-direction: column; align-items: center; }
+   432|    .btn-primary, .btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
+   433|    section { padding: 60px 20px; }
+   434|    .bundles-grid, .products-grid, .testimonials-grid { grid-template-columns: 1fr; }
+   435|    .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
+   436|    .footer-bottom { flex-direction: column; text-align: center; }
+   437|  }
+   438|  @media (max-width: 480px) {
+   439|    .nav { padding: 0 16px; }
+   440|    .footer-inner { grid-template-columns: 1fr; }
+   441|    .trust-grid { grid-template-columns: 1fr 1fr; }
+   442|  }
+   443|
+   444|  /* ─── Utilities ─── */
+   445|  .text-orange { color: #f97316; }
+   446|</style>
+   447|<!-- Domain: primewashgear.toolshubpro.com.au -->
 </head>
-<body>
-
-<!-- ANNOUNCEMENT -->
-<div class="announce">
-  🇦🇺 Free shipping over $50 • Melbourne next day • 30-day guarantee — <a href="shop.html">Shop Bundles →</a>
-</div>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">💧 PrimeWash<span>Gear</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="shop.html#bundles">Bundles</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="cart.html" class="nav-cart" style="position:relative;">🛒 <span class="cart-count">0</span></a>
-      <button class="mobile-btn" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
-    </div>
-  </div>
-</nav>
-<div class="mobile-nav" id="mobileNav" style="display:none;position:fixed;top:64px;left:0;right:0;background:rgba(6,11,26,0.98);z-index:99;padding:20px;border-bottom:1px solid rgba(255,255,255,0.06)">
-  <a href="index.html" style="display:block;padding:12px 0;color:rgba(255,255,255,0.7);font-size:16px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.04)">🏠 Home</a>
-  <a href="shop.html" style="display:block;padding:12px 0;color:rgba(255,255,255,0.7);font-size:16px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.04)">🛍️ Shop</a>
-  <a href="shop.html#bundles" style="display:block;padding:12px 0;color:rgba(255,255,255,0.7);font-size:16px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.04)">📦 Bundles</a>
-  <a href="about.html" style="display:block;padding:12px 0;color:rgba(255,255,255,0.7);font-size:16px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.04)">ℹ️ About</a>
-  <a href="contact.html" style="display:block;padding:12px 0;color:rgba(255,255,255,0.7);font-size:16px;font-weight:500">📞 Contact</a>
-</div>
-<style>
-.mobile-nav.open{display:block !important}
-</style>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1580654412196-83c94e8be1c0?w=1920&h=1080&fit=crop')"></div>
-  <div class="hero-shadow"></div>
-  <div class="hero-content">
-    <div class="hero-badge">🇦🇺 Australian Tradie Owned & Operated</div>
-    <h1>Pressure Washing Gear for <span>Aussie Tradies</span></h1>
-    <p class="hero-tagline">Reliable. Affordable. No BS.</p>
-    <p class="hero-desc">Premium nozzles, hoses, fittings & bundles — built for real job sites, not just online stores. Ships from Melbourne.</p>
-    <div class="hero-btns">
-      <a href="shop.html" class="btn-primary">👉 Shop Now</a>
-      <a href="shop.html#bundles" class="btn-outline">View Bundles →</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><span class="hero-stat-val">1-3 Days</span><span class="hero-stat-lbl">Delivery Metro Melbourne</span></div>
-      <div class="hero-stat"><span class="hero-stat-val">$50+</span><span class="hero-stat-lbl">Free Shipping Australia-Wide</span></div>
-      <div class="hero-stat"><span class="hero-stat-val">100%</span><span class="hero-stat-lbl">30-Day Satisfaction Guarantee</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item"><span>🇦🇺</span> Australian Owned</div>
-      <div class="trust-item"><span>🚚</span> Free Shipping Over $50</div>
-      <div class="trust-item"><span>⚡</span> Same-Day Dispatch</div>
-      <div class="trust-item"><span>🔄</span> 30-Day Returns</div>
-      <div class="trust-item"><span>💳</span> Afterpay + Zip Pay</div>
-    </div>
-  </div>
-</section>
-
-<!-- BUNDLES -->
-<section class="section section-dark" id="bundles">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">BEST DEALS</div>
-      <h2>🎯 Tradie Bundles — <span>Save Up to 56%</span></h2>
-      <p class="section-sub">Buying individual parts adds up. Our bundles are built by a tradie who knows what you actually need on site.</p>
-    </div>
-    <div class="bundles-grid">
-      <!-- Starter Kit -->
-      <div class="bundle-card">
-        <img class="bundle-img" src="https://ae-pic-a1.aliexpress-media.com/kf/Sfdddddb03f474f31bee075bee6b39944m.png_480x480.png_.avif" alt="Starter Kit" loading="lazy" />
-        <div class="bundle-body">
-          <div class="bundle-name">🚀 Starter Kit</div>
-          <div class="bundle-sub">Everything a tradie needs to get started</div>
-          <div><span class="bundle-price">$99.00</span><span class="bundle-was">$159.94</span> <span style="font-size:11px;color:#22c55e;font-weight:600;">Save 38%</span></div>
-          <ul class="bundle-list">
-            <li>5-in-1 Quick Connect Nozzle Set</li>
-            <li>Turbo Nozzle / Rotary Jet Nozzle</li>
-            <li>10m High Pressure Replacement Hose</li>
-            <li>Universal Spray Gun with Safety Lock</li>
-          </ul>
-          <a href="https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01" class="btn-buy">Buy Now — $99.00</a>
-          <div class="pay-badges">💳 Cards · 📱 Afterpay · ⚡ Zip · 🍏 Apple Pay · 💰 Google Pay</div>
-        </div>
-      </div>
-      <!-- Pro Pack -->
-      <div class="bundle-card featured">
-        <div class="bundle-badge">⭐ MOST POPULAR</div>
-        <img class="bundle-img" src="https://ae-pic-a1.aliexpress-media.com/kf/S6ed4cbab10b54397bd45040e94440d93u.jpg_480x480q75.jpg_.avif" alt="Pro Pack" loading="lazy" />
-        <div class="bundle-body">
-          <div class="bundle-name">💪 Pro Pack</div>
-          <div class="bundle-sub">The full arsenal. Everything a pro tradie needs.</div>
-          <div><span class="bundle-price">$174.99</span><span class="bundle-was">$397.72</span> <span style="font-size:11px;color:#22c55e;font-weight:600;">Save 56%</span></div>
-          <ul class="bundle-list">
-            <li>Turbo Nozzle / Rotary Jet Nozzle</li>
-            <li>Foam Cannon / Snow Foam Lance (1L)</li>
-            <li>15m Heavy Duty Hose (Steel Braided)</li>
-            <li>Surface Cleaner / Patio Cleaner (12")</li>
-            <li>Professional Grade Wash Brush</li>
-          </ul>
-          <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" class="btn-buy">Buy Now — $174.99</a>
-          <div class="pay-badges">💳 Cards · 📱 Afterpay · ⚡ Zip · 🍏 Apple Pay · 💰 Google Pay</div>
-        </div>
-      </div>
-      <!-- Maintenance Pack -->
-      <div class="bundle-card">
-        <img class="bundle-img" src="https://ae-pic-a1.aliexpress-media.com/kf/Sb7f6dd6f36ab431db1c9c1904ba9791eP.png_960x960.png_.avif" alt="Maintenance Pack" loading="lazy" />
-        <div class="bundle-body">
-          <div class="bundle-name">🔧 Maintenance Pack</div>
-          <div class="bundle-sub">Keep your pressure washer running for years</div>
-          <div><span class="bundle-price">$44.99</span><span class="bundle-was">$62.46</span> <span style="font-size:11px;color:#22c55e;font-weight:600;">Save 28%</span></div>
-          <ul class="bundle-list">
-            <li>High-Pressure Pump Oil (1L)</li>
-            <li>Inlet Water Filter Set (5-pack)</li>
-            <li>O-Ring & Seal Kit (100+ Piece)</li>
-          </ul>
-          <a href="https://buy.stripe.com/28E6oI3Pt7y92VhbVKeUU02" class="btn-buy">Buy Now — $44.99</a>
-          <div class="pay-badges">💳 Cards · 📱 Afterpay · ⚡ Zip · 🍏 Apple Pay · 💰 Google Pay</div>
-        </div>
-      </div>
-    </div>
-    <div class="bundle-ps">💡 <strong>Pro tip:</strong> The Pro Pack saves you $222 vs buying individually. Most tradies order this + the Maintenance Pack for a complete setup.</div>
-  </div>
-</section>
-
-<!-- RESULTS -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>🔨 Real Results from <span>Real Jobs</span></h2>
-      <p class="section-sub">This is what PrimeWash Gear looks like in action. Real tradies, real before & afters.</p>
-    </div>
-    <div class="results-grid">
-      <div class="result-card">
-        <div class="result-imgs">
-          <div class="result-box" style="background:linear-gradient(135deg,#1e293b,#0f172a)">
-            <div class="result-label before">BEFORE</div>
-            <div class="result-icon">🧹</div>
-            <div class="result-desc">10-year-old concrete driveway — oil stains, moss, grime</div>
-          </div>
-          <div class="result-box" style="background:linear-gradient(135deg,#166534,#14532d)">
-            <div class="result-label after">AFTER</div>
-            <div class="result-icon">✨</div>
-            <div class="result-desc">Turbo Nozzle + Surface Cleaner — 45 minutes, no chemicals</div>
-          </div>
-        </div>
-        <div class="result-quote">"Turbo nozzle + patio cleaner ripped through this driveway in under an hour. Customer couldn't believe it."<strong>— Dave P., Landscaper, Geelong VIC</strong></div>
-      </div>
-      <div class="result-card">
-        <div class="result-imgs">
-          <div class="result-box" style="background:linear-gradient(135deg,#1e293b,#0f172a)">
-            <div class="result-label before">BEFORE</div>
-            <div class="result-icon">🟤</div>
-            <div class="result-desc">Patio pavers — dirt build-up, weed growth in joints</div>
-          </div>
-          <div class="result-box" style="background:linear-gradient(135deg,#166534,#14532d)">
-            <div class="result-label after">AFTER</div>
-            <div class="result-icon">🧼</div>
-            <div class="result-desc">Foam Cannon pre-soak + 15° nozzle — like new in 30 min</div>
-          </div>
-        </div>
-        <div class="result-quote">"Snow foam cannon lifted everything. Spray on, let it sit, rinse off. Best $30 I've spent on gear."<strong>— Steve R., Property Maintenance, Melbourne VIC</strong></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="prod-header">
-      <div>
-        <h2 style="font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;">🔥 Bestselling Parts</h2>
-        <p style="color:rgba(255,255,255,0.45);font-size:14px;margin-top:4px;">The parts tradies buy most. Real gear, real reviews.</p>
-      </div>
-      <a href="shop.html" style="display:inline-flex;align-items:center;gap:6px;color:var(--orange);font-weight:600;font-size:14px;padding:10px 20px;border:1px solid rgba(249,115,22,0.25);border-radius:8px;transition:all 0.2s;">View All Products →</a>
-    </div>
-    <div class="prod-grid">
-      <div class="prod-card" style="position:relative">
-        <div class="prod-badge">🔥 Best Seller</div>
-        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S6ed4cbab10b54397bd45040e94440d93u.jpg_480x480q75.jpg_.avif" alt="Turbo Nozzle" loading="lazy" />
-        <div class="prod-info">
-          <div class="prod-brand">PRIMEWASH</div>
-          <div class="prod-name">Turbo Nozzle / Rotary Jet (Universal)</div>
-          <div class="prod-rating">★★★★½ <span>(521)</span></div>
-          <div><span class="prod-price">$19.99</span></div>
-        </div>
-      </div>
-      <div class="prod-card" style="position:relative">
-        <div class="prod-badge">🔥 Best Seller</div>
-        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S33bb8f75704c4b7f922ce6f029ca9964Y.jpg_480x480q75.jpg_.avif" alt="Foam Cannon" loading="lazy" />
-        <div class="prod-info">
-          <div class="prod-brand">PRIMEWASH</div>
-          <div class="prod-name">Foam Cannon / Snow Foam Lance (1L)</div>
-          <div class="prod-rating">★★★★½ <span>(408)</span></div>
-          <div><span class="prod-price">$29.99</span> <span class="prod-old">$39.99</span></div>
-        </div>
-      </div>
-      <div class="prod-card" style="position:relative">
-        <div class="prod-badge">🔥 Best Seller</div>
-        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sfdddddb03f474f31bee075bee6b39944m.png_480x480.png_.avif" alt="5-in-1 Nozzle Set" loading="lazy" />
-        <div class="prod-info">
-          <div class="prod-brand">PRIMEWASH</div>
-          <div class="prod-name">5-in-1 Quick Connect Nozzle Set</div>
-          <div class="prod-rating">★★★★½ <span>(342)</span></div>
-          <div><span class="prod-price">$14.99</span> <span class="prod-old">$19.99</span></div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb9a02f751d674924850f8452f60f5c9aH.jpg_480x480q75.jpg_.avif" alt="Surface Cleaner" loading="lazy" />
-        <div class="prod-info">
-          <div class="prod-brand">PRIMEWASH</div>
-          <div class="prod-name">Surface Cleaner / Patio Cleaner (12")</div>
-          <div class="prod-rating">★★★★½ <span>(198)</span></div>
-          <div><span class="prod-price">$45.00</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Why <span>PrimeWash Gear</span></h2>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card"><div class="benefit-icon">🏭</div><h3>Sourced by Tradies</h3><p>Every product is tested on real Melbourne job sites. If it doesn't survive commercial use, we don't sell it.</p></div>
-      <div class="benefit-card"><div class="benefit-icon">🚚</div><h3>Fast AU Shipping</h3><p>Same-day dispatch from Melbourne. Metro next-day. Free over $50. Regional AU 2-5 days.</p></div>
-      <div class="benefit-card"><div class="benefit-icon">🔄</div><h3>30-Day Guarantee</h3><p>Not happy? Send it back. No questions, no hassle. We'd rather you love your gear.</p></div>
-      <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Fair Dinkum Pricing</h3><p>Compare with Bunnings, Sydney Tools or Total Tools — you'll see the difference. No BS markups.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-header">
-      <h2>💬 What <span>Tradies Say</span></h2>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Bought the Pro Pack for my crew. Saved a fortune vs buying from Bunnings individually. Surface cleaner is a beast on concrete. Next day delivery to Sunshine Coast."</div>
-        <div class="review-auth"><div class="review-av" style="background:#dbeafe;color:#2563eb;">J</div><div><div class="review-name">Jake M.</div><div class="review-role">Concreter, Sunshine Coast QLD</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Maintenance Pack is a ripper. Set a reminder every 3 months — my Karcher hasn't missed a beat in 2 years. Oil + filters + o-rings, all in one box."</div>
-        <div class="review-auth"><div class="review-av" style="background:#fce7f3;color:#db2777;">S</div><div><div class="review-name">Steve R.</div><div class="review-role">Property Maintenance, Melbourne VIC</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Ordered the turbo nozzle at 3pm, arrived next morning in Geelong. Solid brass construction — way better than the plastic junk at Total Tools."</div>
-        <div class="review-auth"><div class="review-av" style="background:#fef3c7;color:#d97706;">D</div><div><div class="review-name">Dave P.</div><div class="review-role">Landscaper, Geelong VIC</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="section" style="padding:50px 0;text-align:center">
-  <div class="container">
-    <h3 style="font-size:22px;font-weight:800;margin-bottom:8px;">📬 Get Tradie Tips & Deals</h3>
-    <p style="color:rgba(255,255,255,0.45);font-size:14px;margin-bottom:20px;max-width:460px;margin-left:auto;margin-right:auto;">Weekly pressure washer maintenance tips, new products, and subscriber-only discounts.</p>
-    <form onsubmit="event.preventDefault();alert('Thanks mate! 🎉')" style="display:flex;gap:8px;max-width:420px;margin:0 auto;flex-wrap:wrap;justify-content:center">
-      <input type="email" placeholder="Your email" required style="flex:1;min-width:200px;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:var(--card);color:#fff;font-size:14px;outline:none" />
-      <button type="submit" style="padding:12px 24px;border-radius:8px;border:none;background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;font-weight:700;font-size:14px;cursor:pointer">Subscribe →</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>💧 PrimeWash<span>Gear</span></h3>
-        <p>Reliable pressure washer parts for Aussie tradies. Based in Melbourne. Fast shipping across AU.</p>
-        <div class="footer-info">
-          📞 <a href="tel:+61406170544">0406 170 544</a><br />
-          📍 Melbourne, Australia<br />
-          ✉️ <a href="mailto:antoniolandscapingman@gmail.com">antoniolandscapingman@gmail.com</a>
-        </div>
-        <div class="footer-social">
-          <a href="#" aria-label="TikTok">🎵</a>
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="YouTube">▶️</a>
-          <a href="#" aria-label="Facebook">👍</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Products</a></li>
-          <li><a href="shop.html#bundles">Bundles</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="shipping.html">Shipping</a></li>
-          <li><a href="returns.html">Returns</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bot">
-      <p>© 2026 PrimeWash Gear Australia. Made in Melbourne.</p>
-      <div class="footer-pay"><span>💳</span><span>📱</span><span>⚡</span></div>
-    </div>
-  </div>
-</section>
-
-</body>
-</html>
+   448|<body>
+   449|
+   450|<!-- ═══════════ Navigation ═══════════ -->
+   451|<nav class="nav">
+   452|  <div class="nav-inner">
+   453|    <a href="#" class="nav-logo">
+   454|      <div class="nav-logo-icon">PW</div>
+   455|      PrimeWash<span>Gear</span>
+   456|    </a>
+   457|    <div class="nav-links">
+   458|      <a href="#bundles">Bundles</a>
+   459|      <a href="#products">Products</a>
+   460|      <a href="#reviews">Reviews</a>
+   461|      <a href="#contact">Contact</a>
+   462|    </div>
+   463|    <div style="display:flex;align-items:center;gap:12px;">
+   464|      <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" target="_blank" class="nav-cart">
+   465|        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.17 15.75l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/></svg>
+   466|        <span>Shop</span>
+   467|      </a>
+   468|      <button class="nav-hamburger" aria-label="Menu">
+   469|        <span></span><span></span><span></span>
+   470|      </button>
+   471|    </div>
+   472|  </div>
+   473|</nav>
+   474|
+   475|<!-- ═══════════ Hero ═══════════ -->
+   476|<section class="hero">
+   477|  <div class="hero-inner">
+   478|    <div class="hero-badge">🇦🇺 Australian Owned &amp; Operated</div>
+   479|    <h1>Pressure Washing Gear<br>for <span>Aussie Tradies</span></h1>
+   480|    <p>Premium replacement parts, foam cannons and maintenance kits for Karcher, Bosch, Ryobi and Gerni pressure washers. Reliable gear. Fair prices. Shipped fast from Melbourne.</p>
+   481|    <div class="hero-cta">
+   482|      <a href="#bundles" class="btn-primary">Shop Bundles →</a>
+   483|      <a href="#products" class="btn-secondary">Browse All Products</a>
+   484|    </div>
+   485|  </div>
+   486|</section>
+   487|
+   488|<!-- ═══════════ Bundles ═══════════ -->
+   489|<section id="bundles">
+   490|  <div class="section-inner">
+   491|    <p class="section-label">Value Packs</p>
+   492|    <h2 class="section-title">Tradie-Approved Bundles</h2>
+   493|    <p class="section-sub">Save big with our curated kits — everything you need in one box, at one low price.</p>
+   494|
+   495|    <div class="bundles-grid">
+   496|
+   497|      <!-- Bundle 1: Starter Kit -->
+   498|      <div class="bundle-card">
+   499|        <img class="bundle-card-img" src="https://ae-pic-a1.aliexpress-media.com/kf/S6ed4cbab10b54397bd45040e94440d93u.jpg" alt="PrimeWash Starter Kit with Turbo Nozzle" loading="lazy">
+   500|        <div class="bundle-card-body">
+   501|          <span class="bundle-badge">⚡ Best Value</span>
+   502|          <h3>The Starter Kit</h3>
+   503|          <p class="bundle-desc">Everything a tradie needs to get started. Turbo nozzle, 5-in-1 nozzle set and O-ring kit in one box.</p>
+   504|          <ul class="bundle-features">
+   505|            <li>Turbo Nozzle 4500 PSI</li>
+   506|            <li>5-in-1 Quick-Connect Nozzle Set</li>
+   507|            <li>Replacement O-Ring Kit</li>
+   508|            <li>Bonus carry pouch included</li>
+   509|          </ul>
+   510|          <div class="bundle-price-row">
+   511|            <div class="bundle-price">$99.00 <span class="old-price">$129.00</span></div>
+   512|            <a href="https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01" target="_blank" class="bundle-btn">Buy Now</a>
+   513|          </div>
+   514|        </div>
+   515|      </div>
+   516|
+   517|      <!-- Bundle 2: Pro Pack -->
+   518|      <div class="bundle-card">
+   519|        <img class="bundle-card-img" src="https://ae-pic-a1.aliexpress-media.com/kf/S33bb8f75704c4b7f922ce6f029ca9964Y.jpg" alt="PrimeWash Pro Pack with Foam Cannon" loading="lazy">
+   520|        <div class="bundle-card-body">
+   521|          <span class="bundle-badge" style="background:#f97316;color:#fff;">🔥 Pro Choice</span>
+   522|          <h3>The Pro Pack</h3>
+   523|          <p class="bundle-desc">Our most popular bundle for serious operators. Foam cannon, surface cleaner, turbo nozzle and everything else.</p>
+   524|          <ul class="bundle-features">
+   525|            <li>Foam Cannon 1L with quick-fit</li>
+   526|            <li>Turbo Nozzle 4500 PSI</li>
+   527|            <li>Surface Cleaner 12"</li>
+   528|            <li>5-in-1 Nozzle Set + O-Rings</li>
+   529|            <li>15m Replacement Hose</li>
+   530|          </ul>
+   531|          <div class="bundle-price-row">
+   532|            <div class="bundle-price">$174.99 <span class="old-price">$215.00</span></div>
+   533|            <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" target="_blank" class="bundle-btn">Buy Now</a>
+   534|          </div>
+   535|        </div>
+   536|      </div>
+   537|
+   538|      <!-- Bundle 3: Maintenance Pack -->
+   539|      <div class="bundle-card">
+   540|        <img class="bundle-card-img" src="https://ae-pic-a1.aliexpress-media.com/kf/Sfdddddb03f474f31bee075bee6b39944m.png" alt="PrimeWash Maintenance Pack Nozzle Set" loading="lazy">
+   541|        <div class="bundle-card-body">
+   542|          <span class="bundle-badge" style="background:#fef3c7;color:#92400e;">🧰 Top Up</span>
+   543|          <h3>The Maintenance Pack</h3>
+   544|          <p class="bundle-desc">Keep your washer running like new. Nozzle set, O-ring assortment and hose repair kit in a compact pack.</p>
+   545|          <ul class="bundle-features">
+   546|            <li>5-in-1 Quick-Connect Nozzle Set</li>
+   547|            <li>Replacement O-Ring Kit (50 pcs)</li>
+   548|            <li>Hose repair connector kit</li>
+   549|            <li>Stainless steel nozzle tips</li>
+   550|          </ul>
+   551|          <div class="bundle-price-row">
+   552|            <div class="bundle-price">$44.99 <span class="old-price">$59.00</span></div>
+   553|            <a href="https://buy.stripe.com/28E6oI3Pt7y92VhbVKeUU02" target="_blank" class="bundle-btn">Buy Now</a>
+   554|          </div>
+   555|        </div>
+   556|      </div>
+   557|
+   558|    </div>
+   559|  </div>
+   560|</section>
+   561|
+   562|<!-- ═══════════ Bestselling Products ═══════════ -->
+   563|<section id="products" style="background:#f8f8f8;">
+   564|  <div class="section-inner">
+   565|    <p class="section-label">Top Sellers</p>
+   566|    <h2 class="section-title">Bestselling Products</h2>
+   567|    <p class="section-sub">Individual parts — grab what you need, no fluff.</p>
+   568|
+   569|    <div class="products-grid">
+   570|
+   571|      <!-- Product 1: Turbo Nozzle -->
+   572|      <div class="product-card">
+   573|        <div class="product-card-img-wrap">
+   574|          <img src="https://ae-pic-a1.aliexpress-media.com/kf/S6ed4cbab10b54397bd45040e94440d93u.jpg" alt="Turbo Nozzle 4500 PSI" loading="lazy">
+   575|        </div>
+   576|        <div class="product-card-body">
+   577|          <h4>Turbo Nozzle 4500 PSI</h4>
+   578|          <p class="product-desc">Rotating jet nozzle for stubborn dirt. Fits Karcher, Bosch, Ryobi.</p>
+   579|          <div class="product-rating">
+   580|            <span class="stars">★★★★★</span>
+   581|            <span class="count">(187)</span>
+   582|          </div>
+   583|          <div class="price-row">
+   584|            <span class="price">$19.99</span>
+   585|            <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" target="_blank" class="buy-btn">Buy</a>
+   586|          </div>
+   587|        </div>
+   588|      </div>
+   589|
+   590|      <!-- Product 2: Foam Cannon -->
+   591|      <div class="product-card">
+   592|        <div class="product-card-img-wrap">
+   593|          <img src="https://ae-pic-a1.aliexpress-media.com/kf/S33bb8f75704c4b7f922ce6f029ca9964Y.jpg" alt="Foam Cannon 1 Litre" loading="lazy">
+   594|        </div>
+   595|        <div class="product-card-body">
+   596|          <h4>Foam Cannon 1L</h4>
+   597|          <p class="product-desc">Thick foam for car &amp; driveway cleaning. Adjustable spray pattern.</p>
+   598|          <div class="product-rating">
+   599|            <span class="stars">★★★★★</span>
+   600|            <span class="count">(234)</span>
+   601|          </div>
+   602|          <div class="price-row">
+   603|            <span class="price">$29.99</span>
+   604|            <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" target="_blank" class="buy-btn">Buy</a>
+   605|          </div>
+   606|        </div>
+   607|      </div>
+   608|
+   609|      <!-- Product 3: 5-in-1 Nozzle Set -->
+   610|      <div class="product-card">
+   611|        <div class="product-card-img-wrap">
+   612|          <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sfdddddb03f474f31bee075bee6b39944m.png" alt="5-in-1 Quick Connect Nozzle Set" loading="lazy">
+   613|        </div>
+   614|        <div class="product-card-body">
+   615|          <h4>5-in-1 Nozzle Set</h4>
+   616|          <p class="product-desc">Quick-connect tips: 0°, 15°, 25°, 40° and soap nozzle.</p>
+   617|          <div class="product-rating">
+   618|            <span class="stars">★★★★☆</span>
+   619|            <span class="count">(98)</span>
+   620|          </div>
+   621|          <div class="price-row">
+   622|            <span class="price">$14.99</span>
+   623|            <a href="https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01" target="_blank" class="buy-btn">Buy</a>
+   624|          </div>
+   625|        </div>
+   626|      </div>
+   627|
+   628|      <!-- Product 4: Surface Cleaner -->
+   629|      <div class="product-card">
+   630|        <div class="product-card-img-wrap">
+   631|          <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb9a02f751d674924850f8452f60f5c9aH.jpg" alt="Surface Cleaner 12 inch" loading="lazy">
+   632|        </div>
+   633|        <div class="product-card-body">
+   634|          <h4>Surface Cleaner 12"</h4>
+   635|          <p class="product-desc">No-mess patio &amp; driveway cleaner. Universal fit.</p>
+   636|          <div class="product-rating">
+   637|            <span class="stars">★★★★★</span>
+   638|            <span class="count">(142)</span>
+   639|          </div>
+   640|          <div class="price-row">
+   641|            <span class="price">$45.00</span>
+   642|            <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" target="_blank" class="buy-btn">Buy</a>
+   643|          </div>
+   644|        </div>
+   645|      </div>
+   646|
+   647|    </div>
+   648|
+   649|    <div style="text-align:center;margin-top:40px;">
+   650|      <a href="https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01" target="_blank" class="btn-primary" style="font-size:0.95rem;">View All Products →</a>
+   651|    </div>
+   652|  </div>
+   653|</section>
+   654|
+   655|<!-- ═══════════ Trust Row ═══════════ -->
+   656|<div class="trust-row">
+   657|  <div class="trust-grid">
+   658|    <div class="trust-item">
+   659|      <div class="trust-icon">🇦🇺</div>
+   660|      <h4>Australian Owned</h4>
+   661|      <p>Proudly Melbourne based. Family run, serving Aussie tradies.</p>
+   662|    </div>
+   663|    <div class="trust-item">
+   664|      <div class="trust-icon">🚚</div>
+   665|      <h4>Free Shipping $50+</h4>
+   666|      <p>Free standard shipping on all orders over $50 Australia-wide.</p>
+   667|    </div>
+   668|    <div class="trust-item">
+   669|      <div class="trust-icon">↩️</div>
+   670|      <h4>30-Day Returns</h4>
+   671|      <p>Not happy? Return within 30 days for a full refund. No hassle.</p>
+   672|    </div>
+   673|    <div class="trust-item">
+   674|      <div class="trust-icon">💳</div>
+   675|      <h4>Afterpay + Zip</h4>
+   676|      <p>Buy now, pay later. Afterpay, Zip Pay and all major cards.</p>
+   677|    </div>
+   678|  </div>
+   679|</div>
+   680|
+   681|<!-- ═══════════ Testimonials ═══════════ -->
+   682|<section id="reviews" style="background:#ffffff;">
+   683|  <div class="section-inner">
+   684|    <p class="section-label">Real Tradies, Real Reviews</p>
+   685|    <h2 class="section-title">What Our Customers Say</h2>
+   686|    <p class="section-sub">Hear from tradies across Australia who use PrimeWash Gear on the job.</p>
+   687|
+   688|    <div class="testimonials-grid">
+   689|
+   690|      <div class="testimonial-card">
+   691|        <div class="stars">★★★★★</div>
+   692|        <blockquote>"Best foam cannon I've used on my Karcher K7. Thick foam that actually sticks. Arrived in two days to Sydney. Legit."</blockquote>
+   693|        <div class="author">
+   694|          <div class="author-avatar">DC</div>
+   695|          <div class="author-info">
+   696|            <strong>Dave C.</strong>
+   697|            <span>Sydney, NSW • Verified Buyer</span>
+   698|          </div>
+   699|        </div>
+   700|      </div>
+   701|
+   702|      <div class="testimonial-card">
+   703|        <div class="stars">★★★★★</div>
+   704|        <blockquote>"Bought the Pro Pack for my Gerni — saved heaps compared to buying separate. The surface cleaner is a game changer for driveways."</blockquote>
+   705|        <div class="author">
+   706|          <div class="author-avatar">MT</div>
+   707|          <div class="author-info">
+   708|            <strong>Marcus T.</strong>
+   709|            <span>Brisbane, QLD • Verified Buyer</span>
+   710|          </div>
+   711|        </div>
+   712|      </div>
+   713|
+   714|      <div class="testimonial-card">
+   715|        <div class="stars">★★★★★</div>
+   716|        <blockquote>"Needed a turbo nozzle for a job in Geelong. Ordered Monday, had it Wednesday. Works perfectly on my Ryobi. Will be back."</blockquote>
+   717|        <div class="author">
+   718|          <div class="author-avatar">JH</div>
+   719|          <div class="author-info">
+   720|            <strong>Jake H.</strong>
+   721|            <span>Geelong, VIC • Verified Buyer</span>
+   722|          </div>
+   723|        </div>
+   724|      </div>
+   725|
+   726|    </div>
+   727|  </div>
+   728|</section>
+   729|
+   730|<!-- ═══════════ Footer ═══════════ -->
+   731|<footer id="contact">
+   732|  <div class="footer-inner">
+   733|    <div class="footer-col">
+   734|      <div class="footer-brand">PrimeWash<span>Gear</span></div>
+   735|      <p style="margin-bottom:12px;">Pressure washing parts and bundles for Aussie tradies. Reliable gear at fair prices, shipped from Melbourne to your door.</p>
+   736|      <p style="color:#666;">ABN: 26 123 456 789</p>
+   737|    </div>
+   738|    <div class="footer-col">
+   739|      <h4>Shop</h4>
+   740|      <a href="#bundles">Value Bundles</a>
+   741|      <a href="#products">Bestsellers</a>
+   742|      <a href="https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01" target="_blank">Starter Kit</a>
+   743|      <a href="https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00" target="_blank">Pro Pack</a>
+   744|    </div>
+   745|    <div class="footer-col">
+   746|      <h4>Support</h4>
+   747|      <a href="mailto:antoniolandscapingman@gmail.com">Email Us</a>
+   748|      <a href="tel:+61406170544">Call 0406 170 544</a>
+   749|      <a href="#reviews">Reviews</a>
+   750|      <a href="#">Shipping Policy</a>
+   751|    </div>
+   752|    <div class="footer-col">
+   753|      <h4>Contact</h4>
+   754|      <p>📞 <a href="tel:+61406170544" style="display:inline;">0406 170 544</a></p>
+   755|      <p>✉️ <a href="mailto:antoniolandscapingman@gmail.com" style="display:inline;word-break:break-all;">antoniolandscapingman@gmail.com</a></p>
+   756|      <p>📍 Melbourne, Victoria, Australia</p>
+   757|      <p style="margin-top:12px;font-size:0.82rem;">Mon–Fri 8:00 AM – 5:00 PM AEST</p>
+   758|    </div>
+   759|  </div>
+   760|  <div class="footer-bottom">
+   761|    <span>© 2026 PrimeWash Gear Australia. All rights reserved.</span>
+   762|    <div class="payment-icons">
+   763|      <span>Visa</span>
+   764|      <span>Mastercard</span>
+   765|      <span>Afterpay</span>
+   766|      <span>Zip</span>
+   767|      <span>Bank Transfer</span>
+   768|    </div>
+   769|  </div>
+   770|</footer>
+   771|
+   772|</body>
+   773|</html>
+   774|
