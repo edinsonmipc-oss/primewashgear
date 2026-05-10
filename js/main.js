@@ -210,6 +210,24 @@ function buyNow(url) {
   setTimeout(() => { window.location.href = url; }, 500);
 }
 
+// Individual items checkout — opens contact dialog
+function checkoutIndividualItems() {
+  const total = getCartTotal();
+  const items = cart.map(i => `• ${i.name} x${i.qty}`).join('\n');
+  const msg = encodeURIComponent(
+    `Hi PrimeWash Gear! I'd like to buy:\n${items}\n\nTotal: $${total.toFixed(2)}\n\nPlease send me an invoice or let me know how to pay. Thanks!`
+  );
+  // Offer both email and SMS
+  const choice = confirm(
+    `🛒 Requesting invoice for:\n${items}\n\nTotal: $${total.toFixed(2)}\n\n• Click OK to send via SMS (0406 170 544)\n• Click Cancel to send via email`
+  );
+  if (choice) {
+    window.location.href = `sms:0406170544?body=${msg}`;
+  } else {
+    window.location.href = `mailto:antoniolandscapingman@gmail.com?subject=Order%20Inquiry%20-%20PrimeWash%20Gear&body=${msg}`;
+  }
+}
+
 // ============================================================
 // CART RENDER
 // ============================================================
@@ -259,9 +277,12 @@ function renderCart() {
         </div>
         ${total < 50 ? '<div class="summary-row" style="font-size:12px;color:var(--gray-400);">Add $' + (50 - total).toFixed(2) + ' more for free shipping</div>' : ''}
         <div class="summary-row total"><span>Total</span><span>$${(total + shipping).toFixed(2)}</span></div>
-        <button class="checkout-btn" onclick="showToast('📞 For individual items, please email us at primewashgear@outlook.com or call 0406 170 544')">
-          💳 Checkout Securely →
+        <button class="checkout-btn" onclick="checkoutIndividualItems()">
+          📞 Request Invoice / Checkout →
         </button>
+        <div style="margin-top:12px;padding:12px;background:#fef3c7;border-radius:8px;font-size:13px;text-align:center;color:#92400e;">
+          ⚡ <strong>Pro tip:</strong> Our <a href="shop.html#bundles" style="color:#2563eb;font-weight:600;">bundles</a> are ready to buy now with instant checkout!
+        </div>
         <div class="payment-icons">
           <span>💳 Visa/MC</span>
           <span>📱 Afterpay</span>
@@ -302,6 +323,49 @@ function showToast(message) {
 
 function toggleMobileNav() {
   document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ============================================================
+// CONTACT FORM
+// ============================================================
+
+function submitContactForm(form) {
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const phone = form.phone.value.trim();
+  const subject = form.subject.value;
+  const message = form.message.value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  // Build mailto fallback
+  const emailSubject = encodeURIComponent(`PrimeWash Gear Inquiry: ${subject || 'General'}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject || 'General'}\n\nMessage:\n${message}`
+  );
+  const mailto = `mailto:antoniolandscapingman@gmail.com?subject=${emailSubject}&body=${body}`;
+
+  // Try to open default email client
+  const successEl = document.getElementById('formSuccess');
+  const errorEl = document.getElementById('formError');
+  successEl.style.display = 'none';
+  errorEl.style.display = 'none';
+
+  // Open email client
+  window.location.href = mailto;
+
+  // Show success
+  successEl.style.display = 'block';
+  form.reset();
+
+  // Also copy to clipboard as backup
+  const textToCopy = `To: antoniolandscapingman@gmail.com\nSubject: PrimeWash Gear Inquiry: ${subject || 'General'}\n\n${body}`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(textToCopy).catch(() => {});
+  }
 }
 
 // ============================================================

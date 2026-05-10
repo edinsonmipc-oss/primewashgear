@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Water drop icon -->
+  <text x="600" y="200" text-anchor="middle" font-size="100">💧</text>
+  <!-- Brand name -->
+  <text x="600" y="310" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="64" font-weight="900" fill="white">PrimeWash<span style="fill:#2563eb">Gear</span></text>
+  <!-- Subtitle -->
+  <text x="600" y="380" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="28" fill="#94a3b8">Pressure Washer Parts for Tradies</text>
+  <!-- Badge -->
+  <rect x="440" y="420" width="320" height="50" rx="25" fill="#f59e0b"/>
+  <text x="600" y="452" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#0f172a">🇦🇺 Australian Owned • Melbourne</text>
+  <!-- Bottom bar -->
+  <text x="600" y="540" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="18" fill="#64748b">Turbo Nozzles • Foam Cannons • Surface Cleaners • Bundles</text>
+  <rect x="430" y="560" width="340" height="4" rx="2" fill="#2563eb"/>
+  <text x="600" y="590" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" fill="#64748b">⚡ Free Shipping Over $50 • Same-Day Dispatch from Melbourne</text>
+</svg>

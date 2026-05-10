@@ -10,6 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
+  <link rel="canonical" href="https://edinsonmipc-oss.github.io/primewashgear/contact.html" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Us — PrimeWash Gear Australia" />
+  <meta property="og:description" content="Get in touch with PrimeWash Gear Australia. Based in Notting Hill, Melbourne. Call, email, or use our contact form." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://edinsonmipc-oss.github.io/primewashgear/contact.html" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:site_name" content="PrimeWash Gear Australia" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
 
@@ -66,7 +75,7 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h2>Send Us a Message</h2>
-        <form onsubmit="event.preventDefault(); document.getElementById('formSuccess').style.display='block'; this.reset();">
+        <form onsubmit="event.preventDefault(); submitContactForm(this);">
           <div class="form-group">
             <label for="name">Full Name *</label>
             <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -100,6 +109,9 @@
           </button>
           <p id="formSuccess" style="display:none;margin-top:16px;padding:12px;background:#dcfce7;color:#166534;border-radius:8px;font-weight:600;text-align:center;">
             ✅ Thanks! We'll get back to you within 1-2 hours during business hours.
+          </p>
+          <p id="formError" style="display:none;margin-top:16px;padding:12px;background:#fee2e2;color:#991b1b;border-radius:8px;font-weight:600;text-align:center;">
+            ❌ Couldn't send. Please email us directly at antoniolandscapingman@gmail.com
           </p>
         </form>
       </div>
